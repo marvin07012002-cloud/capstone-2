@@ -21,7 +21,7 @@ public class Main {
         int userInput = 1;
         switch (userInput) {
             case 1:
-            sandwhich.setBreadType(BreadType.WHITE);
+            sandwich.setBreadType(BreadType.WHITE);
             break;
 
         }
