@@ -5,6 +5,7 @@ public class Sandwich {
     private Size size;
     private Meat meat;
     private Cheese cheese;
+    private Sauces sauces;
     private ArrayList<Toppings> toppings;
     private Side side;
     private boolean toasted;
