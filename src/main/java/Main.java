@@ -29,7 +29,7 @@ public class Main {
 
         ///////
 
-        if(sandwich.getSize = Size.LARGE) {
+        if(Sandwich.getSize == Size.LARGE) {
             System.out.println("12 inches... that's huge!");
         }
 
