@@ -5,31 +5,30 @@ public class Main {
         BreadType typeOfBread = BreadType.WHEAT;
 
 
-
         System.out.println(typeOfBread);
 
-        if(typeOfBread == BreadType.WRAP) {
+        if (typeOfBread == BreadType.WRAP) {
             System.out.println("You ordered a wrap... let's rap!");
         }
 
         Sandwich sandwich = new Sandwich();
 
-        String output = """
+        System.out.println("""
                 1. for white
                 2. for wheat
-                """;
+                """);
         int userInput = 1;
         switch (userInput) {
             case 1:
-            sandwich.setBreadType(BreadType.WHITE);
-            break;
+                sandwich.setBreadType(BreadType.WHITE);
+                break;
 
         }
 
 
         ///////
 
-        if(Sandwich.getSize == Size.LARGE) {
+        if (Sandwich.getSize == Size.LARGE) {
             System.out.println("12 inches... that's huge!");
         }
 
