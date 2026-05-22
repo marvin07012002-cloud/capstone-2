@@ -4,11 +4,45 @@ public class Sandwich {
     private BreadType breadType;
     private Size size;
     private Meat meat;
+    private boolean extraMeat;
     private Cheese cheese;
-    private Sauces sauces;
-    private ArrayList<Toppings> toppings;
+    private boolean extraCheese;
+    private ArrayList<Sauces> sauces = new ArrayList<>();
+    private ArrayList<Toppings> toppings = new ArrayList<>();
     private Side side;
     private boolean toasted;
+
+    public boolean isExtraMeat() {
+        return extraMeat;
+    }
+
+    public void setExtraMeat(boolean extraMeat) {
+        this.extraMeat = extraMeat;
+    }
+
+    public boolean isExtraCheese() {
+        return extraCheese;
+    }
+
+    public void setExtraCheese(boolean extraCheese) {
+        this.extraCheese = extraCheese;
+    }
+
+    public void addTopping(Toppings topping){
+        toppings.add(topping);
+    }
+
+    public  void addSauce(Sauces sauce){
+        sauces.add(sauce);
+    }
+
+    public ArrayList<Sauces> getSauces() {
+        return sauces;
+    }
+
+    public void setSauces(ArrayList<Sauces> sauces) {
+        this.sauces = sauces;
+    }
 
     public BreadType getBreadType() {
         return breadType;
@@ -65,4 +99,6 @@ public class Sandwich {
     public void setToasted(boolean toasted) {
         this.toasted = toasted;
     }
+
+
 }
