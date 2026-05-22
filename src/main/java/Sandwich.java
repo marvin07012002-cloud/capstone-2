@@ -28,11 +28,11 @@ public class Sandwich {
         this.extraCheese = extraCheese;
     }
 
-    public void addTopping(Toppings topping){
+    public void addTopping(Toppings topping) {
         toppings.add(topping);
     }
 
-    public  void addSauce(Sauces sauce){
+    public void addSauce(Sauces sauce) {
         sauces.add(sauce);
     }
 
@@ -100,5 +100,16 @@ public class Sandwich {
         this.toasted = toasted;
     }
 
+    public double getPrice() {
+        double price = 0;
 
+        if (size == Size.SMALL) {
+            price = 5.50;
+        } else if (size == Size.MEDIUM) {
+            price = 7.00;
+        } else if (size == Size.LARGE) {
+            price = 8.50;
+        }
+        return price;
+    }
 }
