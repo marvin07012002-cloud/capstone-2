@@ -164,5 +164,8 @@ public class Sandwich implements PriceItem {
         return totalPrice;
     }
 
+    @Override
+    public void displayDetails() {
 
+    }
 }

@@ -5,4 +5,8 @@ public class Chips implements PriceItem {
         return 1.50;
     }
 
+    @Override
+    public void displayDetails() {
+
+    }
 }

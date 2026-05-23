@@ -30,4 +30,8 @@ public class Drink implements PriceItem {
         return price;
     }
 
+    @Override
+    public void displayDetails() {
+
+    }
 }
