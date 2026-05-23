@@ -5,6 +5,10 @@ public class Drink implements PriceItem {
         this.size = size;
     }
 
+    public void setSize(Size size) {
+        this.size = size;
+    }
+
     @Override
     public double getPrice() {
 
