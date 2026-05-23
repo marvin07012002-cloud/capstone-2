@@ -45,14 +45,30 @@ public class Order {
         return chips;
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return sandwiches.isEmpty() && drinks.isEmpty() && chips.isEmpty();
     }
 
-    public void displayOrderDetails(){
-        System.out.println("Order Details");
+    public void displayOrderDetails() {
+        System.out.println("Order Summary");
         System.out.println("===========================");
 
+        for(Sandwich sandwich: sandwiches){
+            sandwich.displayDetails();
+            System.out.println();
+        }
+        for(Drink drink:drinks){
+            drink.displayDetails();
+            System.out.println();
+        }
+        for (Chips chips:chips){
+            chips.displayDetails();
+            System.out.println();
+        }
+
+        System.out.println("====================");
+        System.out.printf("Order Total: $%.2f\n,",getTotalPrice());
 
 
+    }
 }

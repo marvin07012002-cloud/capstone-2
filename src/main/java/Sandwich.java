@@ -9,7 +9,7 @@ public class Sandwich implements PriceItem {
     private boolean extraCheese;
     private ArrayList<Sauces> sauces = new ArrayList<>();
     private ArrayList<Toppings> toppings = new ArrayList<>();
-    private Side side;
+    private ArrayList<Side> sides;
     private boolean toasted;
 
     public boolean isExtraMeat() {
@@ -30,6 +30,10 @@ public class Sandwich implements PriceItem {
 
     public void addTopping(Toppings topping) {
         toppings.add(topping);
+    }
+
+    public void addSide(Side side) {
+        sides.add(side);
     }
 
     public void addSauce(Sauces sauce) {
@@ -84,12 +88,12 @@ public class Sandwich implements PriceItem {
         this.toppings = toppings;
     }
 
-    public Side getSide() {
-        return side;
+    public ArrayList<Side> getSide() {
+        return sides;
     }
 
-    public void setSide(Side side) {
-        this.side = side;
+    public void setSide(ArrayList<Side> side) {
+        this.sides = side;
     }
 
     public boolean isToasted() {
@@ -166,6 +170,58 @@ public class Sandwich implements PriceItem {
 
     @Override
     public void displayDetails() {
+        System.out.println("Sandwich");
+        System.out.println(" Size: " + this.size);
+        System.out.println(" Bread: " + this.breadType);
+        if (meat == null) {
+            System.out.println(" NO MEAT");
+        } else {
+            System.out.println(" Meat: " + this.meat);
+            if (extraMeat) {
+                System.out.println(" Extra Meat: Yes");
+            }
+        }
+        if (cheese == null) {
+            System.out.println(" NO CHEESE");
+        } else {
+            System.out.println(" Cheese: Yes");
+            if (extraCheese) {
+                System.out.println(" Extra Cheese: " + extraCheese);
+            }
+        }
+
+        System.out.println(" Toasted: " + this.toasted);
+
+        System.out.println(" Toppings:");
+        if (toppings.isEmpty()) {
+            System.out.println(" NONE");
+        } else {
+            for (Toppings topping : toppings) {
+                System.out.println(" -" + topping);
+            }
+        }
+
+
+        System.out.println(" Sauces");
+        if (sauces.isEmpty()) {
+            System.out.println(" NONE");
+        } else {
+            for (Sauces sauce : sauces) {
+                System.out.println(" -" + sauce);
+            }
+        }
+
+        System.out.println(" Sides");
+        if (sides.isEmpty()) {
+            System.out.println(" NONE");
+        } else {
+            for (Side side : sides) {
+                System.out.println(" -" + side);
+            }
+
+        }
+        System.out.printf(" Price: $%.2f\n", getPrice());
+
 
     }
 }

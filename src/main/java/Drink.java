@@ -32,6 +32,8 @@ public class Drink implements PriceItem {
 
     @Override
     public void displayDetails() {
-
+        System.out.println("Drink");
+        System.out.println(" Size: " + this.size);
+        System.out.printf(" Price: $%.2f\n",getPrice());
     }
 }

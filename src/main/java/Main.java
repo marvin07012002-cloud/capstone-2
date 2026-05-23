@@ -12,6 +12,13 @@ public class Main {
         sandwich1.addSauce(Sauces.KETCHUP);
         sandwich1.setSide(Side.SAUCE);
 
+        Drink drink = new Drink(Size.MEDIUM);
+        drink.displayDetails();
+
+
+
+
+
 
         System.out.println(sandwich1.getPrice());
 //        BreadType typeOfBread = BreadType.WHEAT;
@@ -45,4 +52,4 @@ public class Main {
 //
 //
 //    }
-}}
+    }}
