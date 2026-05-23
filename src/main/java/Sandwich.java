@@ -9,7 +9,7 @@ public class Sandwich implements PriceItem {
     private boolean extraCheese;
     private ArrayList<Sauces> sauces = new ArrayList<>();
     private ArrayList<Toppings> toppings = new ArrayList<>();
-    private ArrayList<Side> sides;
+    private ArrayList<Side> sides = new ArrayList<>();
     private boolean toasted;
 
     public boolean isExtraMeat() {
