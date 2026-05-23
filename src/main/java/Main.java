@@ -1,18 +1,18 @@
 public class Main {
 
     public static void main(String[] args) {
-        Sandwich sandwich = new Sandwich();
-        sandwich.setSize(Size.MEDIUM);
-        sandwich.setMeat(Meat.BACON);
-        sandwich.setExtraMeat(true);
-        sandwich.addTopping(Toppings.CUCUMBERS);
-        sandwich.addTopping(Toppings.LETTUCE);
-        sandwich.addSauce(Sauces.THOUSAND_ISLANDS);
-        sandwich.addSauce(Sauces.KETCHUP);
-        sandwich.setSide(Side.SAUCE);
+        Sandwich sandwich1 = new Sandwich();
+        sandwich1.setSize(Size.MEDIUM);
+        sandwich1.setMeat(Meat.BACON);
+        sandwich1.setExtraMeat(true);
+        sandwich1.addTopping(Toppings.CUCUMBERS);
+        sandwich1.addTopping(Toppings.LETTUCE);
+        sandwich1.addSauce(Sauces.THOUSAND_ISLANDS);
+        sandwich1.addSauce(Sauces.KETCHUP);
+        sandwich1.setSide(Side.SAUCE);
 
 
-        System.out.println(sandwich.getPrice());
+        System.out.println(sandwich1.getPrice());
         BreadType typeOfBread = BreadType.WHEAT;
 
 
@@ -30,7 +30,7 @@ public class Main {
         int userInput = 1;
         switch (userInput) {
             case 1:
-                sandwich.setBreadType(BreadType.WHITE);
+                sandwich1.setBreadType(BreadType.WHITE);
                 break;
 
         }
