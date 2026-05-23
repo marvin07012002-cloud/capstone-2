@@ -26,8 +26,8 @@ public class Order {
         for (Drink drink : drinks) {
             total += drink.getPrice();
         }
-        for (Chips chip : chips) {
-            total += chip.getPrice();
+        for (Chips chips : chips) {
+            total += chips.getPrice();
         }
         return total;
     }
@@ -44,6 +44,15 @@ public class Order {
     public ArrayList<Chips> getChips() {
         return chips;
     }
+
+    public boolean isEmpty(){
+        return sandwiches.isEmpty() && drinks.isEmpty() && chips.isEmpty();
+    }
+
+    public void displayOrderDetails(){
+        System.out.println("Order Details");
+        System.out.println("===========================");
+
 
 
 }
