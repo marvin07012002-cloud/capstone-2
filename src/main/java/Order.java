@@ -67,7 +67,7 @@ public class Order {
         }
 
         System.out.println("====================");
-        System.out.printf("Order Total: $%.2f\n,",getTotalPrice());
+        System.out.printf("Order Total: $%.2f\n",getTotalPrice());
 
 
     }

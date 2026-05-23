@@ -88,12 +88,12 @@ public class Sandwich implements PriceItem {
         this.toppings = toppings;
     }
 
-    public ArrayList<Side> getSide() {
+    public ArrayList<Side> getSides() {
         return sides;
     }
 
-    public void setSide(ArrayList<Side> side) {
-        this.sides = side;
+    public void setSides(ArrayList<Side> sides) {
+        this.sides = sides;
     }
 
     public boolean isToasted() {
@@ -184,39 +184,44 @@ public class Sandwich implements PriceItem {
         if (cheese == null) {
             System.out.println(" NO CHEESE");
         } else {
-            System.out.println(" Cheese: Yes");
+            System.out.println(" Cheese: " + this.cheese);
             if (extraCheese) {
-                System.out.println(" Extra Cheese: " + extraCheese);
+                System.out.println(" Extra Cheese: Yes");
             }
         }
+        ;
+        if (toasted) {
+            System.out.println(" Toasted: Yes");
+        } else {
+            System.out.println("Toasted: No");
+        }
 
-        System.out.println(" Toasted: " + this.toasted);
 
-        System.out.println(" Toppings:");
+        System.out.println("Toppings");
         if (toppings.isEmpty()) {
             System.out.println(" NONE");
         } else {
             for (Toppings topping : toppings) {
-                System.out.println(" -" + topping);
+                System.out.println(" - " + topping);
             }
         }
 
 
-        System.out.println(" Sauces");
+        System.out.println("Sauces");
         if (sauces.isEmpty()) {
             System.out.println(" NONE");
         } else {
             for (Sauces sauce : sauces) {
-                System.out.println(" -" + sauce);
+                System.out.println(" - " + sauce);
             }
         }
 
-        System.out.println(" Sides");
+        System.out.println("Sides");
         if (sides.isEmpty()) {
             System.out.println(" NONE");
         } else {
             for (Side side : sides) {
-                System.out.println(" -" + side);
+                System.out.println(" - " + side);
             }
 
         }
