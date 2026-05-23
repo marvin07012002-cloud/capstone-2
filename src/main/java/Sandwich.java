@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Sandwich {
+public class Sandwich implements PriceItem {
     private BreadType breadType;
     private Size size;
     private Meat meat;
@@ -100,6 +100,7 @@ public class Sandwich {
         this.toasted = toasted;
     }
 
+    @Override
     public double getPrice() {
         double breadPrice = 0;
         double meatPrice = 0;
@@ -146,16 +147,16 @@ public class Sandwich {
             breadPrice = 8.50;
             meatPrice = 3.00;
             cheesePrice = 2.25;
-            if(meat != null){
+            if (meat != null) {
                 totalPrice += meatPrice;
-                if (extraMeat){
-                    totalPrice+=1.50;
+                if (extraMeat) {
+                    totalPrice += 1.50;
                 }
             }
-            if(cheese != null) {
+            if (cheese != null) {
                 totalPrice += cheesePrice;
-                if(extraCheese){
-                    totalPrice +=0.90;
+                if (extraCheese) {
+                    totalPrice += 0.90;
                 }
             }
             totalPrice += breadPrice;

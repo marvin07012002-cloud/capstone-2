@@ -1,10 +1,11 @@
-public class Drink {
+public class Drink implements PriceItem {
     Size size;
 
     public Drink(Size size) {
         this.size = size;
     }
 
+    @Override
     public double getPrice() {
 
         double price = 0;
