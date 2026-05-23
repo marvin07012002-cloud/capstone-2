@@ -101,15 +101,48 @@ public class Sandwich {
     }
 
     public double getPrice() {
-        double price = 0;
+        double breadPrice = 0;
+        double meatPrice = 0;
+        double cheesePrice = 0;
+        double totalPrice = 0;
 
         if (size == Size.SMALL) {
-            price = 5.50;
+            breadPrice = 5.50;
+            meatPrice = 1.00;
+            cheesePrice = 0.75;
+            totalPrice = breadPrice + meatPrice + cheesePrice;
+            if (extraMeat == true) {
+                totalPrice += 0.50;
+            }
+            if (extraCheese == true) {
+                totalPrice += 0.30;
+            }
         } else if (size == Size.MEDIUM) {
-            price = 7.00;
-        } else if (size == Size.LARGE) {
-            price = 8.50;
+            breadPrice = 7.00;
+            meatPrice = 2.00;
+            cheesePrice = 1.50;
+            totalPrice = breadPrice + meatPrice + cheesePrice;
+            if (extraMeat == true) {
+                totalPrice += 1.00;
+            }
+            if (extraCheese == true) {
+                totalPrice += 0.60;
+                ;
+            } else if (size == Size.LARGE) {
+                breadPrice = 8.50;
+                meatPrice = 3.00;
+                cheesePrice = 2.25;
+                totalPrice = breadPrice + meatPrice + cheesePrice;
+                if (extraMeat == true) {
+                    totalPrice += 1.50;
+                }
+                if (extraCheese == true) {
+                    totalPrice += 0.90;
+                    ;
+                }
+
+            }
         }
-        return price;
+        return totalPrice;
     }
 }

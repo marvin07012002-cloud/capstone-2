@@ -1,7 +1,18 @@
 public class Main {
 
     public static void main(String[] args) {
+        Sandwich sandwich = new Sandwich();
+        sandwich.setSize(Size.MEDIUM);
+        sandwich.setMeat(Meat.BACON);
+        sandwich.setExtraMeat(true);
+        sandwich.addTopping(Toppings.CUCUMBERS);
+        sandwich.addTopping(Toppings.LETTUCE);
+        sandwich.addSauce(Sauces.THOUSAND_ISLANDS);
+        sandwich.addSauce(Sauces.KETCHUP);
+        sandwich.setSide(Side.SAUCE);
 
+
+        System.out.println(sandwich.getPrice());
         BreadType typeOfBread = BreadType.WHEAT;
 
 
@@ -11,7 +22,6 @@ public class Main {
             System.out.println("You ordered a wrap... let's rap!");
         }
 
-        Sandwich sandwich = new Sandwich();
 
         System.out.println("""
                 1. for white
@@ -28,12 +38,10 @@ public class Main {
 
         ///////
 
-        if (Sandwich.getSize == Size.LARGE) {
-            System.out.println("12 inches... that's huge!");
-        }
+//        if (Sandwich.getSize == Size.LARGE) {
+//            System.out.println("12 inches... that's huge!");
+//        }
 
 
     }
-    Sandwich sandwich1 = new Sandwich();
-    sandwich1.
 }
