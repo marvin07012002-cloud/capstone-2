@@ -43,14 +43,6 @@ public class Sandwich implements PriceItem {
         sauces.add(sauce);
     }
 
-    public ArrayList<Sauces> getSauces() {
-        return sauces;
-    }
-
-    public void setSauces(ArrayList<Sauces> sauces) {
-        this.sauces = sauces;
-    }
-
     public BreadType getBreadType() {
         return breadType;
     }
@@ -83,28 +75,24 @@ public class Sandwich implements PriceItem {
         this.cheese = cheese;
     }
 
-    public ArrayList<Toppings> getToppings() {
-        return toppings;
-    }
-
-    public void setToppings(ArrayList<Toppings> toppings) {
-        this.toppings = toppings;
-    }
-
-    public ArrayList<Side> getSides() {
-        return sides;
-    }
-
-    public void setSides(ArrayList<Side> sides) {
-        this.sides = sides;
-    }
-
     public boolean isToasted() {
         return toasted;
     }
 
     public void setToasted(boolean toasted) {
         this.toasted = toasted;
+    }
+
+    public HashSet<Sauces> getSauces() {
+        return sauces;
+    }
+
+    public HashSet<Toppings> getToppings() {
+        return toppings;
+    }
+
+    public HashSet<Side> getSides() {
+        return sides;
     }
 
     @Override
