@@ -81,8 +81,6 @@ public class Order {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd-hhmmss");
 
-        String fileName = now.format(formatter)+ ".txt";
-
-        return fileName;
+        return now.format(formatter)+ ".txt";
     }
 }
