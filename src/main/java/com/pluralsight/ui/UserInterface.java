@@ -1,9 +1,6 @@
 package com.pluralsight.ui;
 
-import com.pluralsight.models.Chips;
-import com.pluralsight.models.Drink;
-import com.pluralsight.models.Order;
-import com.pluralsight.models.Size;
+import com.pluralsight.models.*;
 
 import java.util.Scanner;
 
@@ -123,6 +120,30 @@ public class UserInterface {
     }
 
     private void addSandwichToOrder(Order order) {
+        Sandwich sandwich = new Sandwich();
+        //add bread
+        //add meat
+        // add cheese
+        // other things
+
+        sandwich.displayDetails();
+        while (true) {
+            System.out.println("Would you like to add Sandwich to the Order? Yes/No");
+            String choice = scanner.nextLine();
+            if (choice.equalsIgnoreCase("yes")) {
+                order.addSandwich(sandwich);
+                System.out.println("Your Sandwich has been added successfully!");
+                return;
+            } else if (choice.equalsIgnoreCase("no")) {
+                System.err.println("Sandwich Cancelled.");
+                break;
+            } else {
+                System.err.println("\t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖\n" +
+                        "\t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌\n" +
+                        "\t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌\n" +
+                        "                              ");
+            }
+        }
     }
 
     private void addDrinkToOrder(Order order) {
