@@ -73,10 +73,13 @@ public class UserInterface {
 
             switch (choice) {
                 case "1":
+                    addSandwichToOrder();
                     break;
                 case "2":
+                    addDrinkToOrder();
                     break;
                 case "3":
+                    addChipsToOrder();
                     break;
                 case "4":
                     if(order.isEmpty()){

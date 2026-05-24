@@ -54,7 +54,7 @@ public class Order {
     }
 
     public boolean isEmpty() {
-        return sandwiches.isEmpty() && drinks.isEmpty() && chips.isEmpty();
+        return this.sandwiches.isEmpty() && this.drinks.isEmpty() && this.chips.isEmpty();
     }
 
     public void displayOrderDetails() {
