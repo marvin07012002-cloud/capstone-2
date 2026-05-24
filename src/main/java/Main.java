@@ -21,30 +21,30 @@ public class Main {
 //       order.addDrink();
 //       order.displayOrderDetails();
 
-        Order order = new Order();
-
-        Sandwich sandwich1 = new Sandwich();
-        sandwich1.setSize(Size.SMALL);
-        sandwich1.setBreadType(BreadType.WHITE);
-        sandwich1.setMeat(Meat.STEAK);
-        sandwich1.setExtraMeat(true);
-        sandwich1.setCheese(Cheese.AMERICAN);
-        sandwich1.addTopping(Toppings.LETTUCE);
-        sandwich1.addTopping(Toppings.TOMATOES);
-        sandwich1.addSauce(Sauces.MAYO);
-        sandwich1.setToasted(true);
-
-        order.addSandwich(sandwich1);
-
-        Drink drink = new Drink(Size.MEDIUM);
-        order.addDrink(drink);
-
-        Chips chips = new Chips();
-        order.addChips(chips);
-
-        order.displayOrderDetails();
-        order.saveReceipt();
-    }
+//        Order order = new Order();
+//
+//        Sandwich sandwich1 = new Sandwich();
+//        sandwich1.setSize(Size.SMALL);
+//        sandwich1.setBreadType(BreadType.WHITE);
+//        sandwich1.setMeat(Meat.STEAK);
+//        sandwich1.setExtraMeat(true);
+//        sandwich1.setCheese(Cheese.AMERICAN);
+//        sandwich1.addTopping(Toppings.LETTUCE);
+//        sandwich1.addTopping(Toppings.TOMATOES);
+//        sandwich1.addSauce(Sauces.MAYO);
+//        sandwich1.setToasted(true);
+//
+//        order.addSandwich(sandwich1);
+//
+//        Drink drink = new Drink(Size.MEDIUM);
+//        order.addDrink(drink);
+//
+//        Chips chips = new Chips();
+//        order.addChips(chips);
+//
+//        order.displayOrderDetails();
+//        order.saveReceipt();
+//    }
 
 
 
@@ -78,4 +78,4 @@ public class Main {
 //        ///////
 //
 
-    }
+    }}

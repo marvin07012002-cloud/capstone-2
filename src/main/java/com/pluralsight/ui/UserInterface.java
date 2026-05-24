@@ -1,7 +1,9 @@
 package com.pluralsight.ui;
 
 import com.pluralsight.models.Chips;
+import com.pluralsight.models.Drink;
 import com.pluralsight.models.Order;
+import com.pluralsight.models.Size;
 
 import java.util.Scanner;
 
@@ -106,6 +108,7 @@ public class UserInterface {
                             }
                         }
                     }
+                    break;
 
                 case "0":
                     System.err.println("\tOrder Cancelled");
@@ -123,6 +126,61 @@ public class UserInterface {
     }
 
     private void addDrinkToOrder(Order order) {
+        Drink drink = null;
+
+        while (drink == null) {
+            System.out.println("""
+                    What drink size would you like?
+                    1) Small
+                    2) Medium
+                    3) Large
+                    4) Cancel
+                    
+                    Choose an option.
+                    """);
+
+            String choice = scanner.nextLine();
+
+            switch (choice) {
+                case "1":
+                    drink = new Drink(Size.SMALL);
+                    break;
+                case "2":
+                    drink = new Drink(Size.MEDIUM);
+                    break;
+                case "3":
+                    drink = new Drink(Size.LARGE);
+                    break;
+                case "4":
+                    return;
+                default:
+                    System.err.println("\t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖\n" +
+                            "\t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌\n" +
+                            "\t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌\n" +
+                            "                              ");
+            }
+        }
+
+        drink.displayDetails();
+        while (true) {
+            System.out.println("Would you like to add the drink to the order? Yes/No");
+            String choice = scanner.nextLine();
+
+            if (choice.equalsIgnoreCase("yes")) {
+                order.addDrink(drink);
+                System.out.println("\tDrink Added Successfully");
+                return;
+            } else if (choice.equalsIgnoreCase("no")) {
+                System.err.println("Drink cancelled");
+                return;
+            } else {
+                System.err.println("\t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖\n" +
+                        "\t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌\n" +
+                        "\t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌\n" +
+                        "                              ");
+            }
+        }
+
     }
 
     private void addChipsToOrder(Order order) {
