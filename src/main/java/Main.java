@@ -1,8 +1,12 @@
 import com.pluralsight.models.*;
+import com.pluralsight.ui.UserInterface;
 
 public class Main {
 
     public static void main(String[] args) {
+
+        UserInterface ui = new UserInterface();
+        ui.display();
 //        Sandwich sandwich1 = new com.pluralsight.models.Sandwich();
 //        sandwich1.setSize(Size.MEDIUM);
 //        sandwich1.setMeat(Meat.BACON);
