@@ -1,3 +1,5 @@
+package com.pluralsight.models;
+
 public enum Sauces {
     MAYO,
     MUSTARD,

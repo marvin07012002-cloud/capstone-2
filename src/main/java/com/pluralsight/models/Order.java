@@ -1,3 +1,7 @@
+package com.pluralsight.models;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Order {
@@ -70,5 +74,15 @@ public class Order {
         System.out.printf("Order Total: $%.2f\n",getTotalPrice());
 
 
+    }
+
+    public String getReceiptName(){
+        LocalDateTime now = LocalDateTime.now();
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd-hhmmss");
+
+        String fileName = now.format(formatter)+ ".txt";
+
+        return fileName;
     }
 }

@@ -1,3 +1,5 @@
+package com.pluralsight.models;
+
 public class Drink implements PriceItem {
     Size size;
 
@@ -33,7 +35,7 @@ public class Drink implements PriceItem {
     @Override
     public void displayDetails() {
         System.out.println("Drink");
-        System.out.println(" Size: " + this.size);
-        System.out.printf(" Price: $%.2f\n",getPrice());
+        System.out.println("\tSize: " + this.size);
+        System.out.printf("\tDrink Price: $%.2f\n",getPrice());
     }
 }

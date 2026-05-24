@@ -1,3 +1,5 @@
+package com.pluralsight.models;
+
 import java.util.ArrayList;
 
 public class Sandwich implements PriceItem {
@@ -171,61 +173,61 @@ public class Sandwich implements PriceItem {
     @Override
     public void displayDetails() {
         System.out.println("Sandwich");
-        System.out.println(" Size: " + this.size);
-        System.out.println(" Bread: " + this.breadType);
+        System.out.println("\tSize: " + this.size);
+        System.out.println("\tBread: " + this.breadType);
         if (meat == null) {
-            System.out.println(" NO MEAT");
+            System.out.println("\tNO MEAT");
         } else {
-            System.out.println(" Meat: " + this.meat);
+            System.out.println("\tMeat: " + this.meat);
             if (extraMeat) {
-                System.out.println(" Extra Meat: Yes");
+                System.out.println("\tExtra Meat: Yes");
             }
         }
         if (cheese == null) {
-            System.out.println(" NO CHEESE");
+            System.out.println("\tNO CHEESE");
         } else {
-            System.out.println(" Cheese: " + this.cheese);
+            System.out.println("\tCheese: " + this.cheese);
             if (extraCheese) {
-                System.out.println(" Extra Cheese: Yes");
+                System.out.println("\tExtra Cheese: Yes");
             }
         }
         ;
         if (toasted) {
-            System.out.println(" Toasted: Yes");
+            System.out.println("\tToasted: Yes");
         } else {
-            System.out.println("Toasted: No");
+            System.out.println("\tToasted: No");
         }
 
 
-        System.out.println("Toppings");
+        System.out.println(" Toppings");
         if (toppings.isEmpty()) {
-            System.out.println(" NONE");
+            System.out.println("\tNONE");
         } else {
             for (Toppings topping : toppings) {
-                System.out.println(" - " + topping);
+                System.out.println("\t- " + topping);
             }
         }
 
 
-        System.out.println("Sauces");
+        System.out.println(" Sauces");
         if (sauces.isEmpty()) {
-            System.out.println(" NONE");
+            System.out.println("\tNONE");
         } else {
             for (Sauces sauce : sauces) {
-                System.out.println(" - " + sauce);
+                System.out.println("\t- " + sauce);
             }
         }
 
-        System.out.println("Sides");
+        System.out.println(" Sides");
         if (sides.isEmpty()) {
-            System.out.println(" NONE");
+            System.out.println("\tNONE");
         } else {
             for (Side side : sides) {
-                System.out.println(" - " + side);
+                System.out.println("\t- " + side);
             }
 
         }
-        System.out.printf(" Price: $%.2f\n", getPrice());
+        System.out.printf("Sandwich Price: $%.2f\n", getPrice());
 
 
     }

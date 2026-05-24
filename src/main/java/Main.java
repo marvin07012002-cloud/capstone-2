@@ -1,7 +1,9 @@
+import com.pluralsight.models.*;
+
 public class Main {
 
     public static void main(String[] args) {
-//        Sandwich sandwich1 = new Sandwich();
+//        Sandwich sandwich1 = new com.pluralsight.models.Sandwich();
 //        sandwich1.setSize(Size.MEDIUM);
 //        sandwich1.setMeat(Meat.BACON);
 //        sandwich1.setExtraMeat(true);
@@ -9,7 +11,7 @@ public class Main {
 //        sandwich1.addTopping(Toppings.CUCUMBERS);
 //        sandwich1.addTopping(Toppings.LETTUCE);
 //        sandwich1.addSauce(Sauces.THOUSAND_ISLANDS);
-//        sandwich1.addSauce(Sauces.KETCHUP);
+//        sandwich1.addSauce(models.Sauces.KETCHUP);
 //
 //       Order order = new Order();
 //       order.addDrink();
@@ -45,12 +47,12 @@ public class Main {
 
 
 //        System.out.println(sandwich1.getPrice());
-//        BreadType typeOfBread = BreadType.WHEAT;
+//        BreadType typeOfBread = com.pluralsight.models.BreadType.WHEAT;
 //
 //
 //        System.out.println(typeOfBread);
 //
-//        if (typeOfBread == BreadType.WRAP) {
+//        if (typeOfBread == com.pluralsight.models.BreadType.WRAP) {
 //            System.out.println("You ordered a wrap... let's rap!");
 //        }
 //
@@ -70,10 +72,5 @@ public class Main {
 //
 //        ///////
 //
-////        if (Sandwich.getSize == Size.LARGE) {
-////            System.out.println("12 inches... that's huge!");
-////        }
-//
-//
-//    }
+
     }
