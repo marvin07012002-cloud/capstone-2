@@ -1,5 +1,9 @@
 package com.pluralsight.models;
 
+import javax.imageio.IIOException;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -57,30 +61,71 @@ public class Order {
         System.out.println("Order Summary");
         System.out.println("===========================");
 
-        for(Sandwich sandwich: sandwiches){
+        for (Sandwich sandwich : sandwiches) {
             sandwich.displayDetails();
             System.out.println();
         }
-        for(Drink drink:drinks){
+        for (Drink drink : drinks) {
             drink.displayDetails();
             System.out.println();
         }
-        for (Chips chips:chips){
+        for (Chips chips : chips) {
             chips.displayDetails();
             System.out.println();
         }
 
         System.out.println("====================");
-        System.out.printf("Order Total: $%.2f\n",getTotalPrice());
+        System.out.printf("Order Total: $%.2f\n", getTotalPrice());
 
 
     }
 
-    public String getReceiptName(){
+    public String getReceiptName() {
         LocalDateTime now = LocalDateTime.now();
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd-hhmmss");
 
-        return now.format(formatter)+ ".txt";
+        return now.format(formatter) + ".txt";
+    }
+
+    public void saveReceipt() {
+        try {
+            String fileName = getReceiptName();
+
+            FileWriter fileWriter = new FileWriter("src/main/resources/receipts" + fileName);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+            bufferedWriter.write("\tOrder Summary\n");
+            bufferedWriter.write("=================================\n");
+
+            for (Sandwich sandwich : sandwiches) {
+                bufferedWriter.write("Sandwich Total\n");
+                bufferedWriter.write("\tPrice $" + sandwich.getPrice() + "\n");
+                bufferedWriter.write("\n");
+            }
+
+            for (Drink drink : drinks) {
+                bufferedWriter.write("Drinks Total\n");
+                bufferedWriter.write("\tPrice $" + drink.getPrice() + "\n");
+                bufferedWriter.write("\n");
+            }
+
+            for (Chips chip : chips) {
+                bufferedWriter.write("Chips Total\n");
+                bufferedWriter.write("\tPrice $" + chip.getPrice() + "\n");
+                bufferedWriter.write("\n");
+            }
+
+            bufferedWriter.write("=================================");
+            bufferedWriter.write("\n\tOrder Total:" + getTotalPrice());
+
+            bufferedWriter.close();
+
+            System.out.println("Receipt Save: " + fileName);
+        } catch (IIOException e) {
+            System.err.println("Error saving the receipt");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

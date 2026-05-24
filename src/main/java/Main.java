@@ -39,6 +39,7 @@ public class Main {
         order.addChips(chips);
 
         order.displayOrderDetails();
+        order.saveReceipt();
     }
 
 
