@@ -1,5 +1,6 @@
 package com.pluralsight.ui;
 
+import com.pluralsight.models.Chips;
 import com.pluralsight.models.Order;
 
 import java.util.Scanner;
@@ -73,28 +74,28 @@ public class UserInterface {
 
             switch (choice) {
                 case "1":
-                    addSandwichToOrder();
+                    addSandwichToOrder(order);
                     break;
                 case "2":
-                    addDrinkToOrder();
+                    addDrinkToOrder(order);
                     break;
                 case "3":
-                    addChipsToOrder();
+                    addChipsToOrder(order);
                     break;
                 case "4":
-                    if(order.isEmpty()){
+                    if (order.isEmpty()) {
                         System.err.println("\tYou must at least add one item before check out.");
-                    }else {
+                    } else {
                         order.displayOrderDetails();
                         System.out.println("Confirm Check out? Yes/No: ");
                         String confirm = scanner.nextLine();
 
-                        if(confirm.equalsIgnoreCase("Yes")){
+                        if (confirm.equalsIgnoreCase("Yes")) {
                             order.saveReceipt();
                             return;
                         } else if (confirm.equalsIgnoreCase("No")) {
                             break;
-                        }else {
+                        } else {
                             System.err.println("\t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖\n" +
                                     "\t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌\n" +
                                     "\t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌\n" +
@@ -112,5 +113,29 @@ public class UserInterface {
                             "                              ");
             }
         }
+    }
+
+    private void addSandwichToOrder(Order order) {
+    }
+
+    private void addDrinkToOrder(Order order) {
+    }
+
+    private void addChipsToOrder(Order order) {
+        Chips chips = new Chips();
+
+        chips.displayDetails();
+
+        System.out.println("You want to add Chips to the Order? Yes/No");
+        String confirm = scanner.nextLine();
+
+        if (confirm.equalsIgnoreCase("yes")) {
+            order.addChips(chips);
+            System.out.println("Chips Added Successfully!");
+        } else {
+            System.err.println("Chips Cancelled");
+        }
+
+
     }
 }
