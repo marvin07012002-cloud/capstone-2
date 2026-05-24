@@ -85,24 +85,28 @@ public class UserInterface {
                 case "4":
                     if (order.isEmpty()) {
                         System.err.println("\tYou must at least add one item before check out.");
+                        break;
                     } else {
-                        order.displayOrderDetails();
-                        System.out.println("Confirm Check out? Yes/No: ");
-                        String confirm = scanner.nextLine();
+                        while (true) {
+                            order.displayOrderDetails();
+                            System.out.println("Confirm Check out? Yes/No: ");
+                            String confirm = scanner.nextLine();
 
-                        if (confirm.equalsIgnoreCase("Yes")) {
-                            order.saveReceipt();
-                            return;
-                        } else if (confirm.equalsIgnoreCase("No")) {
-                            break;
-                        } else {
-                            System.err.println("\t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖\n" +
-                                    "\t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌\n" +
-                                    "\t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌\n" +
-                                    "                              ");
+                            if (confirm.equalsIgnoreCase("Yes")) {
+                                order.saveReceipt();
+                                return;
+                            } else if (confirm.equalsIgnoreCase("No")) {
+                                System.out.println("Check out Cancel");
+                                break;
+                            } else {
+                                System.err.println("\t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖\n" +
+                                        "\t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌\n" +
+                                        "\t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌\n" +
+                                        "                              ");
+                            }
                         }
                     }
-                    break;
+
                 case "0":
                     System.err.println("\tOrder Cancelled");
                     return;
@@ -126,16 +130,24 @@ public class UserInterface {
 
         chips.displayDetails();
 
-        System.out.println("You want to add Chips to the Order? Yes/No");
-        String confirm = scanner.nextLine();
 
-        if (confirm.equalsIgnoreCase("yes")) {
-            order.addChips(chips);
-            System.out.println("Chips Added Successfully!");
-        } else {
-            System.err.println("Chips Cancelled");
+        while (true) {
+            System.out.println("You want to add Chips to the Order? Yes/No");
+            String confirm = scanner.nextLine();
+            if (confirm.equalsIgnoreCase("yes")) {
+                order.addChips(chips);
+                System.out.println("Chips Added Successfully!");
+                return;
+            } else if (confirm.equalsIgnoreCase("no")) {
+                System.err.println("Chips Cancelled");
+                return;
+            } else {
+                System.err.println("\t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖\n" +
+                        "\t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌\n" +
+                        "\t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌\n" +
+                        "                              ");
+            }
         }
-
 
     }
 }
