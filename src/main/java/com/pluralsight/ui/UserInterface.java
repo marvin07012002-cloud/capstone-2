@@ -193,7 +193,8 @@ public class UserInterface {
                             "                                                                                                                           ");
             }
         }
-        while (sandwich.getMeat()== null){
+        boolean choosing = true;
+        while (choosing == true) {
             System.out.println("""
                      What meat would you like?
                       1) Steak
@@ -209,25 +210,67 @@ public class UserInterface {
 
             String choice = scanner.nextLine();
 
-            switch (choice){
+            switch (choice) {
                 case "1":
                     sandwich.setMeat(Meat.STEAK);
+                    choosing = false;
                     break;
                 case "2":
                     sandwich.setMeat(Meat.HAM);
+                    choosing = false;
                     break;
                 case "3":
                     sandwich.setMeat(Meat.SALAMI);
+                    choosing = false;
                     break;
                 case "4":
+                    sandwich.setMeat(Meat.ROAST_BEEF);
+                    choosing = false;
+                    break;
+                case "5":
+                    sandwich.setMeat(Meat.CHICKEN);
+                    choosing = false;
+                    break;
+                case "6":
+                    sandwich.setMeat(Meat.BACON);
+                    choosing = false;
+                    break;
+                case "7":
+                    choosing = false;
+                    return;
+                default:
+                    System.err.println("███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n" +
+                            "██╔════╝██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗████╗  ██║    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n" +
+                            "███████╗█████╗  ██║     █████╗  ██║        ██║       ███████║██╔██╗ ██║    ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║\n" +
+                            "╚════██║██╔══╝  ██║     ██╔══╝  ██║        ██║       ██╔══██║██║╚██╗██║    ██║   ██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║\n" +
+                            "███████║███████╗███████╗███████╗╚██████╗   ██║       ██║  ██║██║ ╚████║    ╚██████╔╝██║        ██║   ██║╚██████╔╝██║ ╚████║\n" +
+                            "╚══════╝╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═══╝     ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n" +
+                            "                                                                                                                           ");
 
-
+            }
+            if(!(sandwich.getMeat() == null)) {
+                while (true) {
+                    System.out.println(" Would you like extra meat? Yes/No");
+                    String chooice = scanner.nextLine();
+                    if (chooice.equalsIgnoreCase("yes")) {
+                        sandwich.setExtraMeat(true);
+                        break;
+                    } else if (choice.equalsIgnoreCase("no")) {
+                        break;
+                    } else {
+                        System.err.println("███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n" +
+                                "██╔════╝██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗████╗  ██║    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n" +
+                                "███████╗█████╗  ██║     █████╗  ██║        ██║       ███████║██╔██╗ ██║    ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║\n" +
+                                "╚════██║██╔══╝  ██║     ██╔══╝  ██║        ██║       ██╔══██║██║╚██╗██║    ██║   ██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║\n" +
+                                "███████║███████╗███████╗███████╗╚██████╗   ██║       ██║  ██║██║ ╚████║    ╚██████╔╝██║        ██║   ██║╚██████╔╝██║ ╚████║\n" +
+                                "╚══════╝╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═══╝     ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n" +
+                                "                                                                                                                           ");
+                    }
+                }
             }
         }
 
 
-        //add bread
-        //add meat
         // add cheese
         // other things
 
