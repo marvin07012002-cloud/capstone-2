@@ -10,7 +10,7 @@ public class Chips implements PriceItem {
     @Override
     public void displayDetails() {
         System.out.println("Chips");
-        System.out.printf("Chips Price: $%.2f\n ",getPrice());
+        System.out.printf("\tChips Price: $%.2f\n ",getPrice());
 
     }
 }

@@ -121,6 +121,111 @@ public class UserInterface {
 
     private void addSandwichToOrder(Order order) {
         Sandwich sandwich = new Sandwich();
+
+        while (sandwich.getSize() == null) {
+            System.out.println("""
+                    Select sandwich size
+                    
+                    1) Small 4 Inch
+                    2) Medium 8 Inch
+                    3) Large 12 Inch
+                    4) Cancel
+                    
+                     Choose an option.
+                    """);
+
+            String choice = scanner.nextLine();
+
+            switch (choice) {
+                case "1":
+                    sandwich.setSize(Size.SMALL);
+                    break;
+                case "2":
+                    sandwich.setSize(Size.MEDIUM);
+                    break;
+                case "3":
+                    sandwich.setSize(Size.LARGE);
+                    break;
+                case "4":
+                    return;
+                default:
+                    System.err.println("\t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖\n" +
+                            "\t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌\n" +
+                            "\t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌\n" +
+                            "                              ");
+            }
+        }
+        while (sandwich.getBreadType() == null) {
+            System.out.println("""
+                       What type of bread would you like?
+                    
+                       1) White Bread
+                       2) Wheat Bread
+                       3) Rye Bread
+                       4) Wrap Bread
+                    
+                    
+                    Choose an option.
+                    """);
+
+            String choice = scanner.nextLine();
+
+            switch (choice) {
+                case "1":
+                    sandwich.setBreadType(BreadType.WHITE);
+                    break;
+                case "2":
+                    sandwich.setBreadType(BreadType.WHEAT);
+                    break;
+                case "3":
+                    sandwich.setBreadType(BreadType.RYE);
+                    break;
+                case "4":
+                    sandwich.setBreadType(BreadType.WRAP);
+                    break;
+                default:
+                    System.err.println("███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n" +
+                            "██╔════╝██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗████╗  ██║    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n" +
+                            "███████╗█████╗  ██║     █████╗  ██║        ██║       ███████║██╔██╗ ██║    ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║\n" +
+                            "╚════██║██╔══╝  ██║     ██╔══╝  ██║        ██║       ██╔══██║██║╚██╗██║    ██║   ██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║\n" +
+                            "███████║███████╗███████╗███████╗╚██████╗   ██║       ██║  ██║██║ ╚████║    ╚██████╔╝██║        ██║   ██║╚██████╔╝██║ ╚████║\n" +
+                            "╚══════╝╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═══╝     ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n" +
+                            "                                                                                                                           ");
+            }
+        }
+        while (sandwich.getMeat()== null){
+            System.out.println("""
+                     What meat would you like?
+                      1) Steak
+                      2) Ham
+                      3) Salami
+                      4) Roast Beef
+                      5) Chicken
+                      6) Bacon
+                      7) No Meat
+                    
+                      Choose an option.
+                    """);
+
+            String choice = scanner.nextLine();
+
+            switch (choice){
+                case "1":
+                    sandwich.setMeat(Meat.STEAK);
+                    break;
+                case "2":
+                    sandwich.setMeat(Meat.HAM);
+                    break;
+                case "3":
+                    sandwich.setMeat(Meat.SALAMI);
+                    break;
+                case "4":
+
+
+            }
+        }
+
+
         //add bread
         //add meat
         // add cheese
