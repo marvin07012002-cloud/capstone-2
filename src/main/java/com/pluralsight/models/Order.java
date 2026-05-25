@@ -99,6 +99,18 @@ public class Order {
             bufferedWriter.write("=================================\n");
 
             for (Sandwich sandwich : sandwiches) {
+                bufferedWriter.write("Sandwich Detail\n");
+                bufferedWriter.write("\tSize: " + sandwich.getSize() + "\n");
+                bufferedWriter.write("\tBread: " + sandwich.getBreadType() + "\n");
+                if(sandwich.getMeat()==null){
+                    bufferedWriter.write("\tNO MEAT\n");
+                }else {
+                    bufferedWriter.write("\tMeat: "+ sandwich.getMeat()+"\n");
+                    if(sandwich.isExtraMeat()){
+                        bufferedWriter.write("Extra Meat: Yes");
+                    }
+                }
+
                 bufferedWriter.write("Sandwich Total\n");
                 bufferedWriter.write("\tPrice $" + sandwich.getPrice() + "\n");
                 bufferedWriter.write("\n");
