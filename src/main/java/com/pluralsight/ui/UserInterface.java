@@ -497,7 +497,7 @@ public class UserInterface {
 
         boolean addingSides = true;
 
-        while(addingSides = true){
+        while(addingSides == true){
             System.out.println("""
                      What sides would you like?
                     
@@ -509,9 +509,9 @@ public class UserInterface {
                     
                     """
             );
-            String choice = scanner.nextLine();
+            String election = scanner.nextLine();
 
-            switch(choice){
+            switch(election){
                 case"1":
                     sandwich.addSide(Side.AU_JUS);
                     System.out.println("Side Au Jus Added!");
@@ -524,7 +524,7 @@ public class UserInterface {
                     addingSides = false;
                     break;
                 default:
-                    System.out.println("███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n" +
+                    System.err.println("███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n" +
                             "██╔════╝██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗████╗  ██║    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n" +
                             "███████╗█████╗  ██║     █████╗  ██║        ██║       ███████║██╔██╗ ██║    ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║\n" +
                             "╚════██║██╔══╝  ██║     ██╔══╝  ██║        ██║       ██╔══██║██║╚██╗██║    ██║   ██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║\n" +
