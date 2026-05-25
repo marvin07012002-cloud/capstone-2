@@ -360,7 +360,55 @@ public class UserInterface {
             }
         }
 
-        // other things
+        boolean addingToppings = true;
+
+        while (addingToppings == true){
+            System.out.println("""
+                     What toppings would you like to add?
+                     1) Lettuce
+                     2) Peppers
+                     3) Onions
+                     4) Tomatoes
+                     5) Jalapenos
+                     6) Cucumbers
+                     7) Pickles
+                     8) Guacamole
+                     9) Mushrooms
+                     0) Done
+                    
+                     Choose your options.
+                    
+                    """);
+
+            String puttingTopping = scanner.nextLine();
+
+            switch (puttingTopping){
+                case "1":
+                    sandwich.addTopping(Toppings.LETTUCE);
+                    System.out.println("Lettuce Added!.");
+                    break;
+                case "2":
+                    sandwich.addTopping(Toppings.PEPPERS);
+                    System.out.println("Peppers Added!.");
+                    break;
+                case "3":
+                    sandwich.addTopping(Toppings.ONIONS);
+                    System.out.println("Onions Added!.");
+                    break;
+                case"4":
+                    sandwich.addTopping(Toppings.TOMATOES);
+                    System.out.println("Tomatoes Added!.");
+                    break;
+                case"5":
+                    sandwich.addTopping(Toppings.JALAPENOS);
+                    System.out.println("Jalapenos Added!.");
+                    break;
+                    case"6"
+
+            }
+        }
+
+
 
         sandwich.displayDetails();
         while (true) {
