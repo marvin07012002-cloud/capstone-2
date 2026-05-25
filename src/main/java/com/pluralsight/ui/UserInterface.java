@@ -503,12 +503,35 @@ public class UserInterface {
                     
                      1) Au Jus
                      2) Sauce
+                     0) Done or None
                     
                      Choose a Sauce
                     
                     """
             );
-            String
+            String choice = scanner.nextLine();
+
+            switch(choice){
+                case"1":
+                    sandwich.addSide(Side.AU_JUS);
+                    System.out.println("Side Au Jus Added!");
+                    break;
+                case"2":
+                    sandwich.addSide(Side.SAUCE);
+                    System.out.println("Side Sauce Added!");
+                    break;
+                case"0":
+                    addingSides = false;
+                    break;
+                default:
+                    System.out.println("███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n" +
+                            "██╔════╝██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗████╗  ██║    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n" +
+                            "███████╗█████╗  ██║     █████╗  ██║        ██║       ███████║██╔██╗ ██║    ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║\n" +
+                            "╚════██║██╔══╝  ██║     ██╔══╝  ██║        ██║       ██╔══██║██║╚██╗██║    ██║   ██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║\n" +
+                            "███████║███████╗███████╗███████╗╚██████╗   ██║       ██║  ██║██║ ╚████║    ╚██████╔╝██║        ██║   ██║╚██████╔╝██║ ╚████║\n" +
+                            "╚══════╝╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═══╝     ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n" +
+                            "                                                                                                                           ");
+            }
         }
 
         sandwich.displayDetails();
