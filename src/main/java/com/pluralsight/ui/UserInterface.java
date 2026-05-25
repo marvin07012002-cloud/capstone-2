@@ -403,8 +403,33 @@ public class UserInterface {
                     sandwich.addTopping(Toppings.JALAPENOS);
                     System.out.println("Jalapenos Added!.");
                     break;
-                    case"6"
-
+                case"6":
+                    sandwich.addTopping(Toppings.CUCUMBERS);
+                    System.out.println("Cucumbers Added!.");
+                    break;
+                case "7":
+                    sandwich.addTopping(Toppings.PICKLES);
+                    System.out.println("Pickles Added!.");
+                    break;
+                case"8":
+                    sandwich.addTopping(Toppings.GUACAMOLE);
+                    System.out.println("Guacamole Added!.");
+                    break;
+                case"9":
+                    sandwich.addTopping(Toppings.MUSHROOM);
+                    System.out.println("Mushrooms Added!.");
+                    break;
+                case "0":
+                    addingToppings = false;
+                    break;
+                default:
+                    System.err.println("███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n" +
+                            "██╔════╝██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗████╗  ██║    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n" +
+                            "███████╗█████╗  ██║     █████╗  ██║        ██║       ███████║██╔██╗ ██║    ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║\n" +
+                            "╚════██║██╔══╝  ██║     ██╔══╝  ██║        ██║       ██╔══██║██║╚██╗██║    ██║   ██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║\n" +
+                            "███████║███████╗███████╗███████╗╚██████╗   ██║       ██║  ██║██║ ╚████║    ╚██████╔╝██║        ██║   ██║╚██████╔╝██║ ╚████║\n" +
+                            "╚══════╝╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═══╝     ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n" +
+                            "                                                                                                                           ");
             }
         }
 
