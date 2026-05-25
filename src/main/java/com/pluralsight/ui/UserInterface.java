@@ -248,14 +248,16 @@ public class UserInterface {
                             "                                                                                                                           ");
 
             }
-            if(!(sandwich.getMeat() == null)) {
-                while (true) {
+            if (!(sandwich.getMeat() == null)) {
+                boolean running = true;
+                while (running == true) {
                     System.out.println(" Would you like extra meat? Yes/No");
                     String chooice = scanner.nextLine();
                     if (chooice.equalsIgnoreCase("yes")) {
                         sandwich.setExtraMeat(true);
                         break;
-                    } else if (choice.equalsIgnoreCase("no")) {
+                    } else if (chooice.equalsIgnoreCase("no")) {
+                        running = false;
                         break;
                     } else {
                         System.err.println("███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n" +
@@ -269,11 +271,74 @@ public class UserInterface {
                 }
             }
         }
-        boolean running = true
-        while(running){
+        boolean running = true;
+        while (running) {
             System.out.println("""
-                     What kind of cheese would you like
+                     What kind of cheese would you like?
+                    
+                     1) American
+                     2) Provolone
+                     3) Cheddar
+                     4) Swiss
+                     5) No Cheese
+                    
+                     Choose an option.
                     """);
+
+            String choice = scanner.nextLine();
+            switch (choice) {
+                case "1":
+                    sandwich.setCheese(Cheese.AMERICAN);
+                    running = false;
+                    break;
+                case "2":
+                    sandwich.setCheese(Cheese.PROVOLONE);
+                    running = false;
+                    break;
+                case "3":
+                    sandwich.setCheese(Cheese.CHEDDAR);
+                    running = false;
+                    break;
+                case "4":
+                    sandwich.setCheese(Cheese.SWISS);
+                    running = false;
+                    break;
+                case "5":
+                    running = false;
+                    break;
+                default:
+                    System.err.println("███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n" +
+                            "██╔════╝██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗████╗  ██║    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n" +
+                            "███████╗█████╗  ██║     █████╗  ██║        ██║       ███████║██╔██╗ ██║    ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║\n" +
+                            "╚════██║██╔══╝  ██║     ██╔══╝  ██║        ██║       ██╔══██║██║╚██╗██║    ██║   ██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║\n" +
+                            "███████║███████╗███████╗███████╗╚██████╗   ██║       ██║  ██║██║ ╚████║    ╚██████╔╝██║        ██║   ██║╚██████╔╝██║ ╚████║\n" +
+                            "╚══════╝╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═══╝     ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n" +
+                            "                                                                                                                           ");
+            }
+
+            if (!(sandwich.getCheese() == null)) {
+                boolean cheesing = true;
+                while (cheesing == true) {
+                    System.out.println("Would you like Extra Cheese? Yes/No");
+                    String option = scanner.nextLine();
+                    if(option.equalsIgnoreCase("yes")){
+                        sandwich.setExtraCheese(true);
+                        break;
+                    } else if (option.equalsIgnoreCase("no")) {
+                        cheesing = false;
+                        break;
+                    }
+                    else {
+                        System.err.println("███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n" +
+                                "██╔════╝██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗████╗  ██║    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n" +
+                                "███████╗█████╗  ██║     █████╗  ██║        ██║       ███████║██╔██╗ ██║    ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║\n" +
+                                "╚════██║██╔══╝  ██║     ██╔══╝  ██║        ██║       ██╔══██║██║╚██╗██║    ██║   ██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║\n" +
+                                "███████║███████╗███████╗███████╗╚██████╗   ██║       ██║  ██║██║ ╚████║    ╚██████╔╝██║        ██║   ██║╚██████╔╝██║ ╚████║\n" +
+                                "╚══════╝╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═══╝     ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n" +
+                                "                                                                                                                           ");
+                    }
+                }
+            }
         }
 
 
