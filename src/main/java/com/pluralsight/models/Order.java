@@ -107,8 +107,14 @@ public class Order {
                 }else {
                     bufferedWriter.write("\tMeat: "+ sandwich.getMeat()+"\n");
                     if(sandwich.isExtraMeat()){
-                        bufferedWriter.write("Extra Meat: Yes");
+                        bufferedWriter.write("\tExtra Meat: Yes\n");
                     }
+                }
+
+                if(sandwich.getCheese()==null){
+                    bufferedWriter.write("\tNO CHEESE\n");
+                }else {
+
                 }
 
                 bufferedWriter.write("Sandwich Total\n");
