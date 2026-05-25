@@ -2,6 +2,7 @@ package com.pluralsight.ui;
 
 import com.pluralsight.models.*;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -197,6 +198,7 @@ public class UserInterface {
         while (choosing == true) {
             System.out.println("""
                      What meat would you like?
+                    
                       1) Steak
                       2) Ham
                       3) Salami
@@ -349,7 +351,7 @@ public class UserInterface {
             } else if (isItToasted.equalsIgnoreCase("no")) {
                 toasting = false;
                 break;
-            }else {
+            } else {
                 System.err.println("███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n" +
                         "██╔════╝██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗████╗  ██║    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n" +
                         "███████╗█████╗  ██║     █████╗  ██║        ██║       ███████║██╔██╗ ██║    ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║\n" +
@@ -362,9 +364,10 @@ public class UserInterface {
 
         boolean addingToppings = true;
 
-        while (addingToppings == true){
+        while (addingToppings == true) {
             System.out.println("""
                      What toppings would you like to add?
+                    
                      1) Lettuce
                      2) Peppers
                      3) Onions
@@ -374,7 +377,7 @@ public class UserInterface {
                      7) Pickles
                      8) Guacamole
                      9) Mushrooms
-                     0) Done
+                     0) Done or None
                     
                      Choose your options.
                     
@@ -382,7 +385,7 @@ public class UserInterface {
 
             String puttingTopping = scanner.nextLine();
 
-            switch (puttingTopping){
+            switch (puttingTopping) {
                 case "1":
                     sandwich.addTopping(Toppings.LETTUCE);
                     System.out.println("Lettuce Added!.");
@@ -395,15 +398,15 @@ public class UserInterface {
                     sandwich.addTopping(Toppings.ONIONS);
                     System.out.println("Onions Added!.");
                     break;
-                case"4":
+                case "4":
                     sandwich.addTopping(Toppings.TOMATOES);
                     System.out.println("Tomatoes Added!.");
                     break;
-                case"5":
+                case "5":
                     sandwich.addTopping(Toppings.JALAPENOS);
                     System.out.println("Jalapenos Added!.");
                     break;
-                case"6":
+                case "6":
                     sandwich.addTopping(Toppings.CUCUMBERS);
                     System.out.println("Cucumbers Added!.");
                     break;
@@ -411,11 +414,11 @@ public class UserInterface {
                     sandwich.addTopping(Toppings.PICKLES);
                     System.out.println("Pickles Added!.");
                     break;
-                case"8":
+                case "8":
                     sandwich.addTopping(Toppings.GUACAMOLE);
                     System.out.println("Guacamole Added!.");
                     break;
-                case"9":
+                case "9":
                     sandwich.addTopping(Toppings.MUSHROOM);
                     System.out.println("Mushrooms Added!.");
                     break;
@@ -433,7 +436,64 @@ public class UserInterface {
             }
         }
 
+        boolean addingSauces = true;
 
+        while (addingSauces == true) {
+            System.out.println("""
+                     What sauces would you like?
+                    
+                     1) Mayo
+                     2) Mustard
+                     3) Ketchup
+                     4) Ranch
+                     5) Thousand Islands
+                     6) Vinaigrette
+                     0) Done or None
+                    
+                     Choose your sauces!
+                    
+                    """);
+            String choice = scanner.nextLine();
+
+            switch (choice) {
+                case "1":
+                    sandwich.addSauce(Sauces.MAYO);
+                    System.out.println("Mayo Added!");
+                    break;
+                case "2":
+                    sandwich.addSauce(Sauces.MUSTARD);
+                    System.out.println("Mustard Added!");
+                    break;
+                case "3":
+                    sandwich.addSauce(Sauces.KETCHUP);
+                    System.out.println("Ketchup Added!");
+                    break;
+                case "4":
+                    sandwich.addSauce(Sauces.RANCH);
+                    System.out.println("Ranch Added!");
+                    break;
+                case "5":
+                    sandwich.addSauce(Sauces.THOUSAND_ISLANDS);
+                    System.out.println("Thousand Islands Added!");
+                    break;
+                case "6":
+                    sandwich.addSauce(Sauces.VINAIGRETTE);
+                    System.out.println("Vinaigrette Added!");
+                    break;
+                case "0":
+                    addingSauces = false;
+                    break;
+                default:
+                    System.err.println("███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n" +
+                            "██╔════╝██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗████╗  ██║    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n" +
+                            "███████╗█████╗  ██║     █████╗  ██║        ██║       ███████║██╔██╗ ██║    ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║\n" +
+                            "╚════██║██╔══╝  ██║     ██╔══╝  ██║        ██║       ██╔══██║██║╚██╗██║    ██║   ██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║\n" +
+                            "███████║███████╗███████╗███████╗╚██████╗   ██║       ██║  ██║██║ ╚████║    ╚██████╔╝██║        ██║   ██║╚██████╔╝██║ ╚████║\n" +
+                            "╚══════╝╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═══╝     ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n" +
+                            "                                                                                                                           ");
+            }
+
+        }
 
         sandwich.displayDetails();
         while (true) {
