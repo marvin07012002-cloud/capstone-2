@@ -114,8 +114,17 @@ public class Order {
                 if(sandwich.getCheese()==null){
                     bufferedWriter.write("\tNO CHEESE\n");
                 }else {
-
+                    bufferedWriter.write("\tCheese: " + sandwich.getCheese()+"\n");
+                    if(sandwich.isExtraCheese()){
+                        bufferedWriter.write("\tExtra Cheese: Yes\n");
+                    }
                 }
+                if(sandwich.isToasted()){
+                    bufferedWriter.write("\tToasted: Yes");
+                }else {
+                    bufferedWriter.write("\tNo Toasted");
+                }
+
 
                 bufferedWriter.write("Sandwich Total\n");
                 bufferedWriter.write("\tPrice $" + sandwich.getPrice() + "\n");
