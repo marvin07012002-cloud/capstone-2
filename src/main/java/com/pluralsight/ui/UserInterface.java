@@ -495,6 +495,22 @@ public class UserInterface {
 
         }
 
+        boolean addingSides = true;
+
+        while(addingSides = true){
+            System.out.println("""
+                     What sides would you like?
+                    
+                     1) Au Jus
+                     2) Sauce
+                    
+                     Choose a Sauce
+                    
+                    """
+            );
+            String
+        }
+
         sandwich.displayDetails();
         while (true) {
             System.out.println("Would you like to add Sandwich to the Order? Yes/No");
