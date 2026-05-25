@@ -120,13 +120,29 @@ public class Order {
                     }
                 }
                 if(sandwich.isToasted()){
-                    bufferedWriter.write("\tToasted: Yes");
+                    bufferedWriter.write("\tToasted: Yes\n");
                 }else {
-                    bufferedWriter.write("\tNo Toasted");
+                    bufferedWriter.write("\tNo Toasted\n");
+                }
+
+                bufferedWriter.write("\tToppings: \n");
+                if(sandwich.getToppings().isEmpty()){
+                    bufferedWriter.write("\tNO TOPPINGS\n");
+                }else{
+                    for (Toppings topping: sandwich.getToppings()){
+                        bufferedWriter.write("\t\t-" + topping+"\n");
+                    }
+                }
+
+                bufferedWriter.write("\tSauces\n");
+                if (sandwich.getSauces().isEmpty()){
+                    bufferedWriter.write("\tNO SAUCE\n");
                 }
 
 
-                bufferedWriter.write("Sandwich Total\n");
+
+
+                bufferedWriter.write("\tSandwich Total\n");
                 bufferedWriter.write("\tPrice $" + sandwich.getPrice() + "\n");
                 bufferedWriter.write("\n");
             }
