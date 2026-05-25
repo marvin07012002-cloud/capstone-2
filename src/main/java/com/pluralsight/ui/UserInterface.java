@@ -321,14 +321,13 @@ public class UserInterface {
                 while (cheesing == true) {
                     System.out.println("Would you like Extra Cheese? Yes/No");
                     String option = scanner.nextLine();
-                    if(option.equalsIgnoreCase("yes")){
+                    if (option.equalsIgnoreCase("yes")) {
                         sandwich.setExtraCheese(true);
                         break;
                     } else if (option.equalsIgnoreCase("no")) {
                         cheesing = false;
                         break;
-                    }
-                    else {
+                    } else {
                         System.err.println("███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n" +
                                 "██╔════╝██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗████╗  ██║    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n" +
                                 "███████╗█████╗  ██║     █████╗  ██║        ██║       ███████║██╔██╗ ██║    ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║\n" +
@@ -340,9 +339,27 @@ public class UserInterface {
                 }
             }
         }
+        boolean toasting = true;
+        while (toasting == true) {
+            System.out.println("Do you want it Toasted? Yes/No");
+            String isItToasted = scanner.nextLine();
+            if (isItToasted.equalsIgnoreCase("Yes")) {
+                sandwich.setToasted(true);
+                break;
+            } else if (isItToasted.equalsIgnoreCase("no")) {
+                toasting = false;
+                break;
+            }else {
+                System.err.println("███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n" +
+                        "██╔════╝██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗████╗  ██║    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n" +
+                        "███████╗█████╗  ██║     █████╗  ██║        ██║       ███████║██╔██╗ ██║    ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║\n" +
+                        "╚════██║██╔══╝  ██║     ██╔══╝  ██║        ██║       ██╔══██║██║╚██╗██║    ██║   ██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║\n" +
+                        "███████║███████╗███████╗███████╗╚██████╗   ██║       ██║  ██║██║ ╚████║    ╚██████╔╝██║        ██║   ██║╚██████╔╝██║ ╚████║\n" +
+                        "╚══════╝╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═══╝     ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n" +
+                        "                                                                                                                           ");
+            }
+        }
 
-
-        // add cheese
         // other things
 
         sandwich.displayDetails();
