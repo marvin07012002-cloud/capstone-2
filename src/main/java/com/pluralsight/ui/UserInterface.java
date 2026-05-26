@@ -346,26 +346,6 @@ public class UserInterface {
                 }
             }
         }
-        boolean toasting = true;
-        while (toasting == true) {
-            System.out.println("Do you want it Toasted? Yes/No");
-            String isItToasted = scanner.nextLine();
-            if (isItToasted.equalsIgnoreCase("Yes")) {
-                sandwich.setToasted(true);
-                break;
-            } else if (isItToasted.equalsIgnoreCase("no")) {
-                toasting = false;
-                break;
-            } else {
-                System.err.println("███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n" +
-                        "██╔════╝██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗████╗  ██║    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n" +
-                        "███████╗█████╗  ██║     █████╗  ██║        ██║       ███████║██╔██╗ ██║    ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║\n" +
-                        "╚════██║██╔══╝  ██║     ██╔══╝  ██║        ██║       ██╔══██║██║╚██╗██║    ██║   ██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║\n" +
-                        "███████║███████╗███████╗███████╗╚██████╗   ██║       ██║  ██║██║ ╚████║    ╚██████╔╝██║        ██║   ██║╚██████╔╝██║ ╚████║\n" +
-                        "╚══════╝╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═══╝     ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n" +
-                        "                                                                                                                           ");
-            }
-        }
 
         boolean addingToppings = true;
 
@@ -498,6 +478,26 @@ public class UserInterface {
                             "                                                                                                                           ");
             }
 
+        }
+        boolean toasting = true;
+        while (toasting == true) {
+            System.out.println("Do you want it Toasted? Yes/No");
+            String isItToasted = scanner.nextLine();
+            if (isItToasted.equalsIgnoreCase("Yes")) {
+                sandwich.setToasted(true);
+                break;
+            } else if (isItToasted.equalsIgnoreCase("no")) {
+                toasting = false;
+                break;
+            } else {
+                System.err.println("███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗\n" +
+                        "██╔════╝██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗████╗  ██║    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║\n" +
+                        "███████╗█████╗  ██║     █████╗  ██║        ██║       ███████║██╔██╗ ██║    ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║\n" +
+                        "╚════██║██╔══╝  ██║     ██╔══╝  ██║        ██║       ██╔══██║██║╚██╗██║    ██║   ██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║\n" +
+                        "███████║███████╗███████╗███████╗╚██████╗   ██║       ██║  ██║██║ ╚████║    ╚██████╔╝██║        ██║   ██║╚██████╔╝██║ ╚████║\n" +
+                        "╚══════╝╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═══╝     ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝\n" +
+                        "                                                                                                                           ");
+            }
         }
 
         boolean addingSides = true;
