@@ -154,7 +154,7 @@ public class Order {
 
 
 
-                bufferedWriter.write("\tSandwich Total\n");
+                bufferedWriter.write("\tSandwich Total:\n");
                 bufferedWriter.write("\tPrice $" + sandwich.getPrice() + "\n");
                 bufferedWriter.write("\n");
             }
@@ -162,14 +162,14 @@ public class Order {
             for (Drink drink : drinks) {
                 bufferedWriter.write("\tDrink Detail\n");
                 bufferedWriter.write("\tDrink Size: " + drink.size + "\n");
-                bufferedWriter.write("\tDrinks Total\n");
+                bufferedWriter.write("\tDrinks Tota:l\n");
                 bufferedWriter.write("\tPrice $" + drink.getPrice() + "\n");
                 bufferedWriter.write("\n");
             }
 
             for (Chips chip : chips) {
                 bufferedWriter.write("\tChips Details\n");
-                bufferedWriter.write("\tChips Total\n");
+                bufferedWriter.write("\tChips Total:\n");
                 bufferedWriter.write("\tPrice $" + chip.getPrice() + "\n");
                 bufferedWriter.write("\n");
             }
