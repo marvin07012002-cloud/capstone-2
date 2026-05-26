@@ -60,10 +60,11 @@ public class UserInterface {
                      \\___/ |__|\\_||_____||_____||__|\\_|    |___|___||_____||__|__| \\__,_|
                     
                      =============================================================
-                                           1) Add Sandwich
-                                           2) Add Drink
-                                           3) Add Chips
-                                           4) Checkout
+                                           1) Add Custom Sandwich
+                                           2) Add Signature Sandwich
+                                           3) Add Drinks
+                                           4) Add Chips
+                                           5) Checkout
                                            0) Cancel Order
                     
                                           Choose an option.
@@ -78,12 +79,15 @@ public class UserInterface {
                     addSandwichToOrder(order);
                     break;
                 case "2":
-                    addDrinkToOrder(order);
+                    addSignatureSandichToOrder(order);
                     break;
                 case "3":
-                    addChipsToOrder(order);
+                    addDrinkToOrder(order);
                     break;
                 case "4":
+                    addChipsToOrder(order);
+                    break;
+                case "5":
                     if (order.isEmpty()) {
                         System.err.println("\tYou must at least add one item before check out.");
                         break;
@@ -121,6 +125,9 @@ public class UserInterface {
                                                          \s""");
             }
         }
+    }
+
+    private void addSignatureSandichToOrder(Order order) {
     }
 
     private void addSandwichToOrder(Order order) {
@@ -502,7 +509,7 @@ public class UserInterface {
 
         boolean addingSides = true;
 
-        while(addingSides == true){
+        while (addingSides == true) {
             System.out.println("""
                      What sides would you like?
                     
@@ -516,16 +523,16 @@ public class UserInterface {
             );
             String election = scanner.nextLine();
 
-            switch(election){
-                case"1":
+            switch (election) {
+                case "1":
                     sandwich.addSide(Side.AU_JUS);
                     System.out.println("Side Au Jus Added!");
                     break;
-                case"2":
+                case "2":
                     sandwich.addSide(Side.SAUCE);
                     System.out.println("Side Sauce Added!");
                     break;
-                case"0":
+                case "0":
                     addingSides = false;
                     break;
                 default:
