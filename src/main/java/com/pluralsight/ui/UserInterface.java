@@ -128,6 +128,21 @@ public class UserInterface {
     }
 
     private void addSignatureSandichToOrder(Order order) {
+        Sandwich sandwich;
+
+        while (true){
+            System.out.println("""
+                     What signature Sandwich would you like?
+                     
+                     1) BLT
+                     2) Philly Cheese Steak
+                     3) Cancel
+                     
+                     Choose an option.
+                    
+                    """);
+
+        }
     }
 
     private void addSandwichToOrder(Order order) {
