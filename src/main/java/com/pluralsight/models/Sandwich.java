@@ -179,7 +179,7 @@ public class Sandwich implements PriceItem {
                 System.out.println("\tExtra Cheese: Yes");
             }
         }
-        ;
+
         if (toasted) {
             System.out.println("\tToasted: Yes");
         } else {

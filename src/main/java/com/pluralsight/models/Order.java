@@ -70,7 +70,7 @@ public class Order {
     public String getReceiptName() {
         LocalDateTime now = LocalDateTime.now();
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd-hhmmss");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");
 
         return now.format(formatter) + ".txt";
     }
