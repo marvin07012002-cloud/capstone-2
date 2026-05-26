@@ -174,7 +174,7 @@ public class Order {
                 bufferedWriter.write("\n");
             }
 
-            bufferedWriter.write("=================================");
+            bufferedWriter.write("==================================");
             bufferedWriter.write("\n\tOrder Total:" + getTotalPrice());
 
             bufferedWriter.close();
