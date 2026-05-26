@@ -14,7 +14,7 @@ public class Drink implements PriceItem {
     @Override
     public double getPrice() {
 
-        double price = 0;
+        double price;
         switch (this.size) {
             case SMALL:
                 price = 2.00;

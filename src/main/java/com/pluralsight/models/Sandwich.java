@@ -1,6 +1,5 @@
 package com.pluralsight.models;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 
 public class Sandwich implements PriceItem {
@@ -10,9 +9,9 @@ public class Sandwich implements PriceItem {
     private boolean extraMeat;
     private Cheese cheese;
     private boolean extraCheese;
-    private HashSet<Sauces> sauces = new HashSet<>();
-    private HashSet<Toppings> toppings = new HashSet<>();
-    private HashSet<Side> sides = new HashSet<>();
+    private final HashSet<Sauces> sauces = new HashSet<>();
+    private final HashSet<Toppings> toppings = new HashSet<>();
+    private final HashSet<Side> sides = new HashSet<>();
     private boolean toasted;
 
     public boolean isExtraMeat() {
