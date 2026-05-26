@@ -13,7 +13,6 @@ class DrinkTest {
         double drinkPrice =drink.getPrice();
 
         assertEquals(2,drinkPrice);
-
     }
 
 }
