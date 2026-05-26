@@ -79,7 +79,7 @@ public class UserInterface {
                     addSandwichToOrder(order);
                     break;
                 case "2":
-                    addSignatureSandichToOrder(order);
+                    addSignatureSandwichToOrder(order);
                     break;
                 case "3":
                     addDrinkToOrder(order);
@@ -127,7 +127,7 @@ public class UserInterface {
         }
     }
 
-    private void addSignatureSandichToOrder(Order order) {
+    private void addSignatureSandwichToOrder(Order order) {
         boolean signing = true;
         Sandwich sandwich = null;
 
@@ -182,25 +182,28 @@ public class UserInterface {
 //                System.err.println("Enter Yes Or NO!!!");
 //            }
 //        }
-        sandwich.displayDetails();
 
-        System.out.println("Would you like to added this Sandwich to your order? Yes/No");
-        String selection = scanner.nextLine();
+        boolean sandwiching = true;
+        while (sandwiching) {
+            sandwich.displayDetails();
+            System.out.println("Would you like to added this Sandwich to your order? Yes/No");
+            String selection = scanner.nextLine();
 
-        if (selection.equalsIgnoreCase("Yes")) {
-            order.addSandwich(sandwich);
-            System.out.println("Sandwich Added Successfully!");
-            return;
-        } else if (selection.equalsIgnoreCase("no")) {
-            System.err.println("Signature Sandwich canceled.");
-            return;
-        } else {
-            System.out.println("""
-                    \t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖
-                    \t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌
-                    \t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌
-                                                 \s""");
+            if (selection.equalsIgnoreCase("Yes")) {
+                order.addSandwich(sandwich);
+                System.out.println("Sandwich Added Successfully!");
+                return;
+            } else if (selection.equalsIgnoreCase("no")) {
+                System.err.println("Signature Sandwich canceled.");
+                return;
+            } else {
+                System.err.println("""
+                        \t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖
+                        \t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌
+                        \t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌
+                                                     \s""");
 
+            }
         }
     }
 
