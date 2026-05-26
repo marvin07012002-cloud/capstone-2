@@ -205,6 +205,9 @@ public class UserInterface {
         }
     }
 
+    private void custumizeSignatureSandwich(Sandwich sandwich) {
+    }
+
     private void addSandwichToOrder(Order order) {
         Sandwich sandwich = new Sandwich();
 
