@@ -169,20 +169,21 @@ public class UserInterface {
             }
 
         }
-        boolean question = true;
-        while (question == true) {
-            System.out.println("Would you like to customize the Sandwich? Yes/no");
-            String answer = scanner.nextLine();
-            if (answer.equalsIgnoreCase("Yes")) {
-                custumizeSignatureSandwich(sandwich);
-            } else if (answer.equalsIgnoreCase("no")) {
-                question = false;
-                break;
-            } else {
-                System.err.println("Enter Yes Or NO!!!");
-            }
-        }
+//        boolean question = true;
+//        while (question == true) {
+//            System.out.println("Would you like to customize the Sandwich? Yes/no");
+//            String answer = scanner.nextLine();
+//            if (answer.equalsIgnoreCase("Yes")) {
+//                custumizeSignatureSandwich(sandwich);
+//            } else if (answer.equalsIgnoreCase("no")) {
+//                question = false;
+//                break;
+//            } else {
+//                System.err.println("Enter Yes Or NO!!!");
+//            }
+//        }
         sandwich.displayDetails();
+
         System.out.println("Would you like to added this Sandwich to your order? Yes/No");
         String selection = scanner.nextLine();
 
@@ -203,42 +204,42 @@ public class UserInterface {
         }
     }
 
-    private void custumizeSignatureSandwich(Sandwich sandwich) {
-        while (true){
-
-            System.out.println("""
-                     What would you like to custom?
-                     
-                     1) Extra Meat
-                     2) Extra Cheese
-                     3) Add Toppings
-                     4) Add Sauces
-                     5) Add Sides
-                     6) Toasted or Not Toasted
-                     0) Done
-                     
-                     Choose one.
-                   
-                    """);
-
-            String choice = scanner.nextLine();
-
-            switch (choice){
-                case "1":
-                    sandwich.setExtraMeat(true);
-                    System.out.println("Extra Meat Added!");
-                    break;
-                case "2":
-                    sandwich.setExtraCheese(true);
-                    System.out.println("Extra Cheese Added!");
-                    break;
-                case "3":
-//                    sandwich.addTopping(); TODO
-
-            }
-        }
-
-    }
+//    private void custumizeSignatureSandwich(Sandwich sandwich) {
+//        while (true){
+//
+//            System.out.println("""
+//                     What would you like to custom?
+//
+//                     1) Extra Meat
+//                     2) Extra Cheese
+//                     3) Add Toppings
+//                     4) Add Sauces
+//                     5) Add Sides
+//                     6) Toasted or Not Toasted
+//                     0) Done
+//
+//                     Choose one.
+//
+//                    """);
+//
+//            String choice = scanner.nextLine();
+//
+//            switch (choice){
+//                case "1":
+//                    sandwich.setExtraMeat(true);
+//                    System.out.println("Extra Meat Added!");
+//                    break;
+//                case "2":
+//                    sandwich.setExtraCheese(true);
+//                    System.out.println("Extra Cheese Added!");
+//                    break;
+//                case "3":
+//                    sandwich.addTopping();
+//
+//            }
+//        }
+//
+//    }
 
     private void addSandwichToOrder(Order order) {
         Sandwich sandwich = new Sandwich();
