@@ -131,27 +131,27 @@ public class UserInterface {
         Sandwich sandwich = null;
         boolean signing = true;
 
-        while (signing){
+        while (signing) {
             System.out.println("""
                      What signature Sandwich would you like?
-                     
+                    
                      1) BLT
                      2) Philly Cheese Steak
                      0) Cancel
-                     
+                    
                      Choose an option.
                     
                     """);
 
             String choice = scanner.nextLine();
 
-            switch (choice){
+            switch (choice) {
                 case "1":
                     sandwich = new Blt();
                     System.out.println("BLT added successfully");
                     signing = false;
                     break;
-                case"2":
+                case "2":
                     sandwich = new PhillyCheeseSteak();
                     System.out.println("Philly Cheese Steak added successfully");
                     signing = false;
@@ -160,16 +160,33 @@ public class UserInterface {
                     return;
                 default:
                     System.err.println("""
-                                        \t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖
-                                        \t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌
-                                        \t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌
-                                                                     \s""");
+                            \t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖
+                            \t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌
+                            \t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌
+                                                         \s""");
             }
 
             sandwich.displayDetails();
+            System.out.println("Would you like to added this Sandwich to your order? Yes/No");
+            String selection = scanner.nextLine();
+
+            if (selection.equalsIgnoreCase("Yes")) {
+                order.addSandwich(sandwich);
+                System.out.println("Sandwich Added Successfully!");
+                return;
+            } else if (selection.equalsIgnoreCase("no")) {
+                System.out.println("Signature Sandwich canceled.");
+                return;
+            } else {
+                System.out.println("""
+                        \t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖
+                        \t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌
+                        \t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌
+                                                     \s""");
+
+            }
 
         }
-
     }
 
     private void addSandwichToOrder(Order order) {
