@@ -9,9 +9,9 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Order {
-    private ArrayList<Sandwich> sandwiches = new ArrayList<>();
-    private ArrayList<Drink> drinks = new ArrayList<>();
-    private ArrayList<Chips> chips = new ArrayList<>();
+    private final ArrayList<Sandwich> sandwiches = new ArrayList<>();
+    private final ArrayList<Drink> drinks = new ArrayList<>();
+    private final ArrayList<Chips> chips = new ArrayList<>();
 
     public void addSandwich(Sandwich sandwich) {
         sandwiches.add(sandwich);
