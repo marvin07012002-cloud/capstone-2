@@ -128,21 +128,48 @@ public class UserInterface {
     }
 
     private void addSignatureSandichToOrder(Order order) {
-        Sandwich sandwich;
+        Sandwich sandwich = null;
+        boolean signing = true;
 
-        while (true){
+        while (signing){
             System.out.println("""
                      What signature Sandwich would you like?
                      
                      1) BLT
                      2) Philly Cheese Steak
-                     3) Cancel
+                     0) Cancel
                      
                      Choose an option.
                     
                     """);
 
+            String choice = scanner.nextLine();
+
+            switch (choice){
+                case "1":
+                    sandwich = new Blt();
+                    System.out.println("BLT added successfully");
+                    signing = false;
+                    break;
+                case"2":
+                    sandwich = new PhillyCheeseSteak();
+                    System.out.println("Philly Cheese Steak added successfully");
+                    signing = false;
+                    break;
+                case "0":
+                    return;
+                default:
+                    System.err.println("""
+                                        \t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖
+                                        \t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌
+                                        \t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌
+                                                                     \s""");
+            }
+
+            sandwich.displayDetails();
+
         }
+
     }
 
     private void addSandwichToOrder(Order order) {
