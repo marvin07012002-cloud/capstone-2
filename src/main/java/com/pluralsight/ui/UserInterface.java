@@ -128,8 +128,8 @@ public class UserInterface {
     }
 
     private void addSignatureSandichToOrder(Order order) {
-        Sandwich sandwich = null;
         boolean signing = true;
+        Sandwich sandwich = null;
 
         while (signing) {
             System.out.println("""
@@ -144,8 +144,8 @@ public class UserInterface {
                     """);
 
             String choice = scanner.nextLine();
-
             switch (choice) {
+
                 case "1":
                     sandwich = new Blt();
                     System.out.println("BLT added successfully");
@@ -157,6 +157,7 @@ public class UserInterface {
                     signing = false;
                     break;
                 case "0":
+                    System.err.println("Cancelled");
                     return;
                 default:
                     System.err.println("""
@@ -164,27 +165,42 @@ public class UserInterface {
                             \t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌
                             \t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌
                                                          \s""");
+                    break;
             }
 
-            sandwich.displayDetails();
-            System.out.println("Would you like to added this Sandwich to your order? Yes/No");
-            String selection = scanner.nextLine();
+        }
 
-            if (selection.equalsIgnoreCase("Yes")) {
-                order.addSandwich(sandwich);
-                System.out.println("Sandwich Added Successfully!");
-                return;
-            } else if (selection.equalsIgnoreCase("no")) {
-                System.out.println("Signature Sandwich canceled.");
+
+        System.out.println("Would you like to customize the Sandwich? Yes/no");
+        String answer = scanner.nextLine();
+        boolean question = true;
+        while (question== true) {
+            if (answer.equalsIgnoreCase("Yes")) {
+                custumizeSignatureSandwich(sandwich);
+            } else if (answer.equalsIgnoreCase("no")) {
+                question = false;
                 break;
             } else {
-                System.out.println("""
-                        \t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖
-                        \t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌
-                        \t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌
-                                                     \s""");
-
+                System.err.println("Enter Yes Or NO!!!");
             }
+        }
+        sandwich.displayDetails();
+        System.out.println("Would you like to added this Sandwich to your order? Yes/No");
+        String selection = scanner.nextLine();
+
+        if (selection.equalsIgnoreCase("Yes")) {
+            order.addSandwich(sandwich);
+            System.out.println("Sandwich Added Successfully!");
+            return;
+        } else if (selection.equalsIgnoreCase("no")) {
+            System.out.println("Signature Sandwich canceled.");
+            return;
+        } else {
+            System.out.println("""
+                    \t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖
+                    \t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌
+                    \t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌
+                                                 \s""");
 
         }
     }
