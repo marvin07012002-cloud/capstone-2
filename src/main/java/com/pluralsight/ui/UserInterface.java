@@ -176,7 +176,7 @@ public class UserInterface {
                 return;
             } else if (selection.equalsIgnoreCase("no")) {
                 System.out.println("Signature Sandwich canceled.");
-                return;
+                break;
             } else {
                 System.out.println("""
                         \t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖
