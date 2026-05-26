@@ -226,7 +226,15 @@ public class UserInterface {
             switch (choice){
                 case "1":
                     sandwich.setExtraMeat(true);
+                    System.out.println("Extra Meat Added!");
                     break;
+                case "2":
+                    sandwich.setExtraCheese(true);
+                    System.out.println("Extra Cheese Added!");
+                    break;
+                case "3":
+//                    sandwich.addTopping(); TODO
+
             }
         }
 
