@@ -40,18 +40,6 @@ public class Order {
         return total;
     }
 
-    public ArrayList<Sandwich> getSandwiches() {
-        return sandwiches;
-    }
-
-    public ArrayList<Drink> getDrinks() {
-        return drinks;
-    }
-
-
-    public ArrayList<Chips> getChips() {
-        return chips;
-    }
 
     public boolean isEmpty() {
         return this.sandwiches.isEmpty() && this.drinks.isEmpty() && this.chips.isEmpty();
