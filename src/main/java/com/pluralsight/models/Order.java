@@ -102,43 +102,55 @@ public class Order {
                 bufferedWriter.write("Sandwich Detail\n");
                 bufferedWriter.write("\tSize: " + sandwich.getSize() + "\n");
                 bufferedWriter.write("\tBread: " + sandwich.getBreadType() + "\n");
-                if(sandwich.getMeat()==null){
+                if (sandwich.getMeat() == null) {
                     bufferedWriter.write("\tNO MEAT\n");
-                }else {
-                    bufferedWriter.write("\tMeat: "+ sandwich.getMeat()+"\n");
-                    if(sandwich.isExtraMeat()){
+                } else {
+                    bufferedWriter.write("\tMeat: " + sandwich.getMeat() + "\n");
+                    if (sandwich.isExtraMeat()) {
                         bufferedWriter.write("\tExtra Meat: Yes\n");
                     }
                 }
 
-                if(sandwich.getCheese()==null){
+                if (sandwich.getCheese() == null) {
                     bufferedWriter.write("\tNO CHEESE\n");
-                }else {
-                    bufferedWriter.write("\tCheese: " + sandwich.getCheese()+"\n");
-                    if(sandwich.isExtraCheese()){
+                } else {
+                    bufferedWriter.write("\tCheese: " + sandwich.getCheese() + "\n");
+                    if (sandwich.isExtraCheese()) {
                         bufferedWriter.write("\tExtra Cheese: Yes\n");
                     }
                 }
-                if(sandwich.isToasted()){
+                if (sandwich.isToasted()) {
                     bufferedWriter.write("\tToasted: Yes\n");
-                }else {
+                } else {
                     bufferedWriter.write("\tNo Toasted\n");
                 }
 
                 bufferedWriter.write("\tToppings: \n");
-                if(sandwich.getToppings().isEmpty()){
+                if (sandwich.getToppings().isEmpty()) {
                     bufferedWriter.write("\tNO TOPPINGS\n");
-                }else{
-                    for (Toppings topping: sandwich.getToppings()){
-                        bufferedWriter.write("\t\t-" + topping+"\n");
+                } else {
+                    for (Toppings topping : sandwich.getToppings()) {
+                        bufferedWriter.write("\t\t-" + topping + "\n");
                     }
                 }
 
                 bufferedWriter.write("\tSauces\n");
-                if (sandwich.getSauces().isEmpty()){
+                if (sandwich.getSauces().isEmpty()) {
                     bufferedWriter.write("\tNO SAUCE\n");
+                } else {
+                    for (Sauces sauce : sandwich.getSauces()) {
+                        bufferedWriter.write("\t\t-" + sauce + "\n");
+                    }
                 }
 
+                bufferedWriter.write("\tSides\n");
+                if(sandwich.getSides().isEmpty()){
+                    bufferedWriter.write("\tNO SIDE\n");
+                }else {
+                    for(Side side:sandwich.getSides()){
+                        bufferedWriter.write("\t\t-"+side +"\n");
+                    }
+                }
 
 
 
@@ -148,13 +160,16 @@ public class Order {
             }
 
             for (Drink drink : drinks) {
-                bufferedWriter.write("Drinks Total\n");
+                bufferedWriter.write("\tDrink Detail\n");
+                bufferedWriter.write("\tDrink Size: " + drink.size + "\n");
+                bufferedWriter.write("\tDrinks Total\n");
                 bufferedWriter.write("\tPrice $" + drink.getPrice() + "\n");
                 bufferedWriter.write("\n");
             }
 
             for (Chips chip : chips) {
-                bufferedWriter.write("Chips Total\n");
+                bufferedWriter.write("\tChips Details\n");
+                bufferedWriter.write("\tChips Total\n");
                 bufferedWriter.write("\tPrice $" + chip.getPrice() + "\n");
                 bufferedWriter.write("\n");
             }
