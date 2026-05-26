@@ -96,9 +96,9 @@ public class Sandwich implements PriceItem {
 
     @Override
     public double getPrice() {
-        double breadPrice = 0;
-        double meatPrice = 0;
-        double cheesePrice = 0;
+        double breadPrice;
+        double meatPrice;
+        double cheesePrice;
         double totalPrice = 0;
 
         if (size == Size.SMALL) {

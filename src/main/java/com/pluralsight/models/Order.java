@@ -1,6 +1,5 @@
 package com.pluralsight.models;
 
-import javax.imageio.IIOException;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -168,9 +167,7 @@ public class Order {
             bufferedWriter.close();
 
             System.out.println("Receipt Save: " + fileName);
-        } catch (IIOException e) {
-            System.err.println("Error saving the receipt");
-        } catch (IOException e) {
+        }catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
