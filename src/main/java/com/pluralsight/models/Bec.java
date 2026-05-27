@@ -6,7 +6,9 @@ public class Bec extends Sandwich {
         setBreadType(BreadType.ROLL);
         setMeat(Meat.BACON);
         setCheese(Cheese.AMERICAN);
-
-
+        setToasted(true);
+        addTopping(Toppings.EGGS);
     }
+
+
 }

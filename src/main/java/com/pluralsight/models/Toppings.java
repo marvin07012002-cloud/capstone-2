@@ -9,6 +9,7 @@ public enum Toppings {
     CUCUMBERS,
     PICKLES,
     GUACAMOLE,
-    MUSHROOM
+    MUSHROOM,
+    EGGS,
 
 }

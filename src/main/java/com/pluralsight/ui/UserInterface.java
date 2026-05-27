@@ -137,6 +137,7 @@ public class UserInterface {
                     
                      1) BLT
                      2) Philly Cheese Steak
+                     3) Beacon Egg and Cheese
                      0) Cancel
                     
                      Choose an option.
@@ -156,6 +157,9 @@ public class UserInterface {
                     System.out.println("Philly Cheese Steak added successfully");
                     signing = false;
                     break;
+                case "3":
+                    System.out.println("Would you like it in a Hero");
+
                 case "0":
                     System.err.println("Cancelled");
                     return;
