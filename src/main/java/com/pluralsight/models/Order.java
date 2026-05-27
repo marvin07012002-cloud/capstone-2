@@ -40,6 +40,10 @@ public class Order {
     }
 
 
+    /**
+     * Determine if an order is empty
+     * @return true if order is empty, false otherwise
+     */
     public boolean isEmpty() {
         return this.sandwiches.isEmpty() && this.drinks.isEmpty() && this.chips.isEmpty();
     }
@@ -63,8 +67,6 @@ public class Order {
 
         System.out.println("====================");
         System.out.printf("Order Total: $%.2f\n", getTotalPrice());
-
-
     }
 
     public String getReceiptName() {
@@ -131,15 +133,13 @@ public class Order {
                 }
 
                 bufferedWriter.write("\tSides\n");
-                if(sandwich.getSides().isEmpty()){
+                if (sandwich.getSides().isEmpty()) {
                     bufferedWriter.write("\tNO SIDE\n");
-                }else {
-                    for(Side side:sandwich.getSides()){
-                        bufferedWriter.write("\t\t-"+side +"\n");
+                } else {
+                    for (Side side : sandwich.getSides()) {
+                        bufferedWriter.write("\t\t-" + side + "\n");
                     }
                 }
-
-
 
                 bufferedWriter.write("\tSandwich Total:\n");
                 bufferedWriter.write("\tPrice $" + sandwich.getPrice() + "\n");
@@ -167,7 +167,7 @@ public class Order {
             bufferedWriter.close();
 
             System.out.println("Receipt Save: " + fileName);
-        }catch (IOException e) {
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }

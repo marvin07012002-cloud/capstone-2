@@ -158,7 +158,35 @@ public class UserInterface {
                     signing = false;
                     break;
                 case "3":
-                    System.out.println("Would you like it in a Hero");
+                    while (true) {
+                        System.out.println("""
+                                What bread would you Like?
+                                1) Hero
+                                2) Roll
+                                """);
+                        String signatureChoice = scanner.nextLine();
+                        switch (signatureChoice) {
+                            case "1":
+                                sandwich = new Bec();
+                                sandwich.setBreadType(BreadType.HERO);
+                                System.out.println("Beacon, Egg and Cheese added successfully");
+                                signing = false;
+                                break;
+                            case "2":
+                                sandwich = new Bec();
+                                System.out.println("Beacon, Egg and Cheese added successfully");
+                                signing = false;
+                                break;
+                            default:
+                                System.err.println("""
+                            \t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖
+                            \t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌
+                            \t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌
+                                                         \s""");
+                                break;
+                        }
+                    }
+
 
                 case "0":
                     System.err.println("Cancelled");
@@ -197,7 +225,6 @@ public class UserInterface {
             }
         }
     }
-
 
 
     private void addSandwichToOrder(Order order) {
