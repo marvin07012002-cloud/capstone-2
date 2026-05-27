@@ -27,4 +27,13 @@ class SandwichTest {
         assertEquals(10.50,bltPrice);
     }
 
+    @Test
+    void checkingCheeseSteak(){
+        Sandwich cheeseSteak = new PhillyCheeseSteak();
+
+        double priceCheeseSteak = cheeseSteak.getPrice();
+
+        assertEquals(10.50,priceCheeseSteak);
+    }
+
 }
