@@ -18,4 +18,13 @@ class SandwichTest {
         assertEquals(8.50,priceReturn);
     }
 
+    @Test
+    void checkingBLT(){
+        Sandwich bLT = new Blt();
+
+        double bltPrice = bLT.getPrice();
+
+        assertEquals(10.50,bltPrice);
+    }
+
 }
