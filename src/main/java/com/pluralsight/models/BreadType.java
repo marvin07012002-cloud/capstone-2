@@ -4,5 +4,7 @@ public enum BreadType {
     WHITE,
     WHEAT,
     RYE,
-    WRAP
+    WRAP,
+    ROLL,
+    HERO
 }
