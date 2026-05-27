@@ -158,36 +158,43 @@ public class UserInterface {
                     signing = false;
                     break;
                 case "3":
-                    while (true) {
+                    boolean choosingBread = true;
+                    while (choosingBread) {
                         System.out.println("""
                                 What bread would you Like?
                                 1) Hero
                                 2) Roll
+                                0) Cancel
                                 """);
                         String signatureChoice = scanner.nextLine();
                         switch (signatureChoice) {
                             case "1":
                                 sandwich = new Bec();
                                 sandwich.setBreadType(BreadType.HERO);
+                                sandwich.setSize(Size.LARGE);
                                 System.out.println("Beacon, Egg and Cheese added successfully");
+                                choosingBread = false;
                                 signing = false;
                                 break;
                             case "2":
                                 sandwich = new Bec();
                                 System.out.println("Beacon, Egg and Cheese added successfully");
+                                choosingBread = false;
                                 signing = false;
                                 break;
+                            case "0":
+                                System.err.println("Cancelled");
+                                return;
                             default:
                                 System.err.println("""
-                            \t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖
-                            \t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌
-                            \t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌
-                                                         \s""");
+                                        \t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖
+                                        \t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌
+                                        \t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌
+                                                                     \s""");
                                 break;
                         }
                     }
-
-
+                    break;
                 case "0":
                     System.err.println("Cancelled");
                     return;
