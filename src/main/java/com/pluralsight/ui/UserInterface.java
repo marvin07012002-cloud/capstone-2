@@ -654,68 +654,6 @@ public class UserInterface {
             }
         }
     }
-//    private void addSauce(Sandwich sandwich) {
-//        boolean addingSauces = true;
-//
-//        while (addingSauces) {
-//            System.out.println("""
-//                     What sauces would you like?
-//
-//                     1) Mayo
-//                     2) Mustard
-//                     3) Ketchup
-//                     4) Ranch
-//                     5) Thousand Islands
-//                     6) Vinaigrette
-//                     0) Done or None
-//
-//                     Choose your sauces!
-//
-//                    """);
-//            String choice = scanner.nextLine();
-//
-//            switch (choice) {
-//                case "1":
-//                    sandwich.addSauce(Sauces.MAYO);
-//                    System.out.println("Mayo Added!");
-//                    break;
-//                case "2":
-//                    sandwich.addSauce(Sauces.MUSTARD);
-//                    System.out.println("Mustard Added!");
-//                    break;
-//                case "3":
-//                    sandwich.addSauce(Sauces.KETCHUP);
-//                    System.out.println("Ketchup Added!");
-//                    break;
-//                case "4":
-//                    sandwich.addSauce(Sauces.RANCH);
-//                    System.out.println("Ranch Added!");
-//                    break;
-//                case "5":
-//                    sandwich.addSauce(Sauces.THOUSAND_ISLANDS);
-//                    System.out.println("Thousand Islands Added!");
-//                    break;
-//                case "6":
-//                    sandwich.addSauce(Sauces.VINAIGRETTE);
-//                    System.out.println("Vinaigrette Added!");
-//                    break;
-//                case "0":
-//                    addingSauces = false;
-//                    break;
-//                default:
-//                    System.err.println("""
-//                            ███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗
-//                            ██╔════╝██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗████╗  ██║    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║
-//                            ███████╗█████╗  ██║     █████╗  ██║        ██║       ███████║██╔██╗ ██║    ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║
-//                            ╚════██║██╔══╝  ██║     ██╔══╝  ██║        ██║       ██╔══██║██║╚██╗██║    ██║   ██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║
-//                            ███████║███████╗███████╗███████╗╚██████╗   ██║       ██║  ██║██║ ╚████║    ╚██████╔╝██║        ██║   ██║╚██████╔╝██║ ╚████║
-//                            ╚══════╝╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═══╝     ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
-//                                                                                                                                                      \s""");
-//            }
-//
-//        }
-//    }
-
     private void addTopping(Sandwich sandwich) {
         boolean adding = true;
 
