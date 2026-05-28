@@ -586,6 +586,21 @@ public class UserInterface {
         if(!sandwich.getSauces().contains(Sauces.RANCH)){
             System.out.println("4) Ranch");
         }
+        if(!sandwich.getSauces().contains(Sauces.THOUSAND_ISLANDS)){
+            System.out.println("5) Thousand Islands");
+        }
+        if(!sandwich.getToppings().contains(Sauces.VINAIGRETTE)){
+            System.out.println("6) Vinaigrette");
+        }
+        System.out.println("0) Done or none\n");
+
+        System.out.println("\tChoose an option");
+        String sauceChoice = scanner.nextLine();
+
+        switch (sauceChoice){
+            case"1":
+
+        }
     }
 //    private void addSauce(Sandwich sandwich) {
 //        boolean addingSauces = true;
