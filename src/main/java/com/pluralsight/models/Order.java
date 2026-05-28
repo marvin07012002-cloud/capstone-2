@@ -81,7 +81,7 @@ public class Order {
         try {
             String fileName = getReceiptName();
 
-            FileWriter fileWriter = new FileWriter("src/main/resources/" + fileName);
+            FileWriter fileWriter = new FileWriter("src/main/resources/Receipts/" + fileName);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
             bufferedWriter.write("\tOrder Summary\n");
