@@ -708,53 +708,22 @@ public class UserInterface {
 
             switch (choice) {
                 case "1":
-                    if (!sandwich.getToppings().contains(Toppings.LETTUCE)) {
-                        sandwich.addTopping(Toppings.LETTUCE);
-                        System.out.println("Lettuce Added!\n");
-                    } else {
-                        System.err.println("You Already Add Lettuce");
-                    }
+                    tryToAddTopping(sandwich,Toppings.LETTUCE,"Lettuce");
                     break;
                 case "2":
-                    if (!sandwich.getToppings().contains(Toppings.PEPPERS)) {
-                        sandwich.addTopping(Toppings.PEPPERS);
-                        System.out.println("Peppers Added!\n");
-                        break;
-                    } else {
-                        System.err.println("You Already Add Peppers");
-                    }
+                    tryToAddTopping(sandwich,Toppings.PEPPERS,"Peppers");
                     break;
                 case "3":
-                    if (!sandwich.getToppings().contains(Toppings.ONIONS)) {
-                        sandwich.addTopping(Toppings.ONIONS);
-                        System.out.println("Onions Added!\n");
-                    } else {
-                        System.err.println("You Already Add Onions");
-                    }
+                    tryToAddTopping(sandwich,Toppings.ONIONS,"Onions");
                     break;
                 case "4":
-                    if (!sandwich.getToppings().contains(Toppings.TOMATOES)) {
-                        sandwich.addTopping(Toppings.TOMATOES);
-                        System.out.println("Tomatoes Added!\n");
-                    } else {
-                        System.err.println("You Already Add Tomatoes");
-                    }
+                    tryToAddTopping(sandwich,Toppings.TOMATOES,"Tomatoes");
                     break;
                 case "5":
-                    if (!sandwich.getToppings().contains(Toppings.JALAPENOS)) {
-                        sandwich.addTopping(Toppings.JALAPENOS);
-                        System.out.println("Jalapenos Added!\n");
-                    } else {
-                        System.err.println("You Already Add Jalapenos");
-                    }
+                    tryToAddTopping(sandwich,Toppings.JALAPENOS,"Jalapenos");
                     break;
                 case "6":
-                    if (!sandwich.getToppings().contains(Toppings.CUCUMBERS)) {
-                        sandwich.addTopping(Toppings.CUCUMBERS);
-                        System.out.println("Cucumbers Added!\n");
-                    } else {
-                        System.err.println("You Already Add Cucumbers");
-                    }
+                    tryToAddTopping(sandwich,Toppings.CUCUMBERS,"Cucumbers");
                     break;
                 case "7":
                     tryToAddTopping(sandwich,Toppings.PICKLES,"Pickles");
