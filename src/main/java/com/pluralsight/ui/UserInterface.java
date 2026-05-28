@@ -632,14 +632,58 @@ public class UserInterface {
         }
     }
 
-    private void addTopping(Sandwich sandwich){
+    private void addTopping(Sandwich sandwich) {
         boolean adding = true;
 
-        while(adding){
-            if
+        while (adding) {
+            System.out.println("\tWhat Toppings Would you like?\n");
+            if (!sandwich.getToppings().contains(Toppings.LETTUCE)) {
+                System.out.println("1) Add Lettuce");
+            }
+            if (!sandwich.getToppings().contains(Toppings.PEPPERS)) {
+                System.out.println("2) Add Peppers");
+            }
+            if(!sandwich.getToppings().contains(Toppings.ONIONS)){
+                System.out.println("3) Add Onions");
+            }
+            if(!sandwich.getToppings().contains(Toppings.TOMATOES)){
+                System.out.println("4) Add Tomatoes");
+            }
+            if(!sandwich.getToppings().contains(Toppings.JALAPENOS)){
+                System.out.println("5) Add Jalapenos");
+            }
+            if(!sandwich.getToppings().contains(Toppings.CUCUMBERS)){
+                System.out.println("6) Add Cucumbers");
+            }
+            if(!sandwich.getToppings().contains(Toppings.PICKLES)){
+                System.out.println("7) Add Pickles");
+            }
+            if(!sandwich.getToppings().contains(Toppings.GUACAMOLE)){
+                System.out.println("8) Add Guacamole");
+            }
+            if(!sandwich.getToppings().contains(Toppings.MUSHROOM)){
+                System.out.println("9) Add Mushrooms");
+            }
+            System.out.println("0) Done or None\n");
+            System.out.println("Choose and option");
+            System.out.println(" ");
+
+            String choice = scanner.nextLine();
+
+            switch (choice){
+                case "1":
+                    if(sandwich.getToppings().contains(Toppings.LETTUCE)){
+                        System.err.println("Lettuce Already added");
+                        break;
+                    }else if(!sandwich.getToppings().contains(Toppings.LETTUCE)){
+                        System.out.println("Lettuce Added");
+                        break;
+                    }
+                case "2":
+                    if(sandwich.getToppings())
+            }
+
         }
-
-
     }
 
 //    private void addTopping(Sandwich sandwich) {
