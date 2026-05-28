@@ -589,7 +589,7 @@ public class UserInterface {
         if(!sandwich.getSauces().contains(Sauces.THOUSAND_ISLANDS)){
             System.out.println("5) Thousand Islands");
         }
-        if(!sandwich.getToppings().contains(Sauces.VINAIGRETTE)){
+        if(!sandwich.getSauces().contains(Sauces.VINAIGRETTE)){
             System.out.println("6) Vinaigrette");
         }
         System.out.println("0) Done or none\n");
@@ -599,6 +599,48 @@ public class UserInterface {
 
         switch (sauceChoice){
             case"1":
+                if(!sandwich.getSauces().contains(Sauces.MAYO)){
+                    sandwich.addSauce(Sauces.MAYO);
+                }else{
+                    System.err.println("Mayo Already Added");
+                }
+            case"2":
+                if(!sandwich.getSauces().contains(Sauces.MUSTARD)){
+                    sandwich.addSauce(Sauces.MUSTARD);
+                }else {
+                    System.err.println("Mustard Already Added");
+                }
+            case"3":
+                if (!sandwich.getSauces().contains(Sauces.KETCHUP)){
+                    sandwich.addSauce(Sauces.KETCHUP);
+                }else {
+                    System.err.println("Ketchup Already Added");
+                }
+            case "4":
+                if(!sandwich.getSauces().contains(Sauces.RANCH)){
+                    sandwich.addSauce(Sauces.RANCH);
+                }else {
+                    System.err.println("Ranch Already Added");
+                }
+            case "5":
+                if(!sandwich.getSauces().contains(Sauces.THOUSAND_ISLANDS)){
+                    sandwich.addSauce(Sauces.THOUSAND_ISLANDS);
+                }else {
+                    System.err.println("Thousand Islands Already Added");
+                }
+            case"6":
+                if(!sandwich.getSauces().contains(Sauces.VINAIGRETTE)){
+                    sandwich.addSauce(Sauces.VINAIGRETTE);
+                }else {
+                    System.err.println("Vinaigrette Already Added");
+                }
+            default:
+                System.err.println("""
+                            \t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖
+                            \t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌
+                            \t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌
+                                                         \s""");
+
 
         }
     }
