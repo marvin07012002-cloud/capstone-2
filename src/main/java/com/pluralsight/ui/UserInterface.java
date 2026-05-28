@@ -643,25 +643,25 @@ public class UserInterface {
             if (!sandwich.getToppings().contains(Toppings.PEPPERS)) {
                 System.out.println("2) Add Peppers");
             }
-            if(!sandwich.getToppings().contains(Toppings.ONIONS)){
+            if (!sandwich.getToppings().contains(Toppings.ONIONS)) {
                 System.out.println("3) Add Onions");
             }
-            if(!sandwich.getToppings().contains(Toppings.TOMATOES)){
+            if (!sandwich.getToppings().contains(Toppings.TOMATOES)) {
                 System.out.println("4) Add Tomatoes");
             }
-            if(!sandwich.getToppings().contains(Toppings.JALAPENOS)){
+            if (!sandwich.getToppings().contains(Toppings.JALAPENOS)) {
                 System.out.println("5) Add Jalapenos");
             }
-            if(!sandwich.getToppings().contains(Toppings.CUCUMBERS)){
+            if (!sandwich.getToppings().contains(Toppings.CUCUMBERS)) {
                 System.out.println("6) Add Cucumbers");
             }
-            if(!sandwich.getToppings().contains(Toppings.PICKLES)){
+            if (!sandwich.getToppings().contains(Toppings.PICKLES)) {
                 System.out.println("7) Add Pickles");
             }
-            if(!sandwich.getToppings().contains(Toppings.GUACAMOLE)){
+            if (!sandwich.getToppings().contains(Toppings.GUACAMOLE)) {
                 System.out.println("8) Add Guacamole");
             }
-            if(!sandwich.getToppings().contains(Toppings.MUSHROOM)){
+            if (!sandwich.getToppings().contains(Toppings.MUSHROOM)) {
                 System.out.println("9) Add Mushrooms");
             }
             System.out.println("0) Done or None\n");
@@ -670,17 +670,17 @@ public class UserInterface {
 
             String choice = scanner.nextLine();
 
-            switch (choice){
+            switch (choice) {
                 case "1":
-                    if(!sandwich.getToppings().contains(Toppings.LETTUCE)){
-                      sandwich.addTopping(Toppings.LETTUCE);
+                    if (!sandwich.getToppings().contains(Toppings.LETTUCE)) {
+                        sandwich.addTopping(Toppings.LETTUCE);
                         System.out.println("Lettuce Added!\n");
-                    }else {
+                    } else {
                         System.err.println("You Already Add Lettuce");
                     }
                     break;
                 case "2":
-                    if(!sandwich.getToppings().contains(Toppings.PEPPERS)){
+                    if (!sandwich.getToppings().contains(Toppings.PEPPERS)) {
                         sandwich.addTopping(Toppings.PEPPERS);
                         System.out.println("Peppers Added!\n");
                         break;
@@ -688,13 +688,71 @@ public class UserInterface {
                         System.err.println("You Already Add Peppers");
                     }
                     break;
-
+                case "3":
+                    if (!sandwich.getToppings().contains(Toppings.ONIONS)) {
+                        sandwich.addTopping(Toppings.ONIONS);
+                        System.out.println("Onions Added!\n");
+                    } else {
+                        System.err.println("You Already Add Onions");
+                    }
+                    break;
+                case "4":
+                    if (!sandwich.getToppings().contains(Toppings.TOMATOES)) {
+                        sandwich.addTopping(Toppings.TOMATOES);
+                        System.out.println("Tomatoes Added!\n");
+                    } else {
+                        System.err.println("You Already Add Tomatoes");
+                    }
+                    break;
+                case "5":
+                    if (!sandwich.getToppings().contains(Toppings.JALAPENOS)) {
+                        sandwich.addTopping(Toppings.JALAPENOS);
+                        System.out.println("Jalapenos Added!\n");
+                    } else {
+                        System.err.println("You Already Add Jalapenos");
+                    }
+                    break;
+                case "6":
+                    if (!sandwich.getToppings().contains(Toppings.CUCUMBERS)) {
+                        sandwich.addTopping(Toppings.CUCUMBERS);
+                        System.out.println("Cucumbers Added!\n");
+                    } else {
+                        System.err.println("You Already Add Cucumbers");
+                    }
+                    break;
+                case "7":
+                    if (!sandwich.getToppings().contains(Toppings.PICKLES)) {
+                        sandwich.addTopping(Toppings.PICKLES);
+                        System.out.println("Pickles Added!\n");
+                    } else {
+                        System.err.println("You Already Add Pickles");
+                    }
+                    break;
+                case "8":
+                    if (!sandwich.getToppings().contains(Toppings.GUACAMOLE)) {
+                        sandwich.addTopping(Toppings.GUACAMOLE);
+                        System.out.println("Guacamole Added!\n");
+                    } else {
+                        System.err.println("You Already Add Guacamole");
+                    }
+                    break;
+                case "9":
+                    if(!sandwich.getToppings().contains(Toppings.MUSHROOM)){
+                        sandwich.addTopping(Toppings.MUSHROOM);
+                        System.out.println("Mushrooms Added!\n");
+                    }else {
+                        System.err.println("You Already Add Mushroom");
+                    }
+                    break;
+                case "0":
+                    adding = false;
+                    break;
                 default:
                     System.err.println("""
-                        \t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖
-                        \t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌
-                        \t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌
-                                                     \s""");
+                            \t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖
+                            \t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌
+                            \t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌
+                                                         \s""");
             }
 
         }
