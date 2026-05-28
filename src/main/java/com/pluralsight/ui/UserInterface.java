@@ -672,15 +672,23 @@ public class UserInterface {
 
             switch (choice){
                 case "1":
-                    if(sandwich.getToppings().contains(Toppings.LETTUCE)){
-                        System.err.println("Lettuce Already added");
-                        break;
-                    }else if(!sandwich.getToppings().contains(Toppings.LETTUCE)){
-                        System.out.println("Lettuce Added");
-                        break;
+                    if(!sandwich.getToppings().contains(Toppings.LETTUCE)){
+
                     }
                 case "2":
-                    if(sandwich.getToppings())
+                    if(sandwich.getToppings().contains(Toppings.PEPPERS)){
+                        System.err.println("Peppers Already Added");
+                        break;
+                    } else if (!sandwich.getToppings().contains(Toppings.PEPPERS)) {
+                        System.out.println("Peppers Added");
+                        break;
+                    }
+                default:
+                    System.err.println("\"\"\"\n" +
+                            "                        \\t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖\n" +
+                            "                        \\t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌\n" +
+                            "                        \\t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌\n" +
+                            "                                                     \\s\"\"\"");
             }
 
         }
