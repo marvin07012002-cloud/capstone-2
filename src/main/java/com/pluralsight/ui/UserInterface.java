@@ -757,12 +757,7 @@ public class UserInterface {
                     }
                     break;
                 case "7":
-                    if (!sandwich.getToppings().contains(Toppings.PICKLES)) {
-                        sandwich.addTopping(Toppings.PICKLES);
-                        System.out.println("Pickles Added!\n");
-                    } else {
-                        System.err.println("You Already Add Pickles");
-                    }
+                    tryToAddTopping(sandwich,Toppings.PICKLES,"Pickles");
                     break;
                 case "8":
                     tryToAddTopping(sandwich, Toppings.GUACAMOLE, "Guacamole");

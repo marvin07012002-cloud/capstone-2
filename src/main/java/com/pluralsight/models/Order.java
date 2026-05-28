@@ -1,6 +1,7 @@
 package com.pluralsight.models;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -8,6 +9,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Order {
+    public static final String RECEIPTS_FOLDER = "src/main/resources/receipts/";
     private final ArrayList<Sandwich> sandwiches = new ArrayList<>();
     private final ArrayList<Drink> drinks = new ArrayList<>();
     private final ArrayList<Chips> chips = new ArrayList<>();
@@ -80,8 +82,12 @@ public class Order {
     public void saveReceipt() {
         try {
             String fileName = getReceiptName();
+            File receiptsFolder = new File(RECEIPTS_FOLDER);
+            if (!receiptsFolder.exists()) {
+                receiptsFolder.mkdirs();
+            }
 
-            FileWriter fileWriter = new FileWriter("src/main/resources/Receipts/" + fileName);
+            FileWriter fileWriter = new FileWriter(RECEIPTS_FOLDER + fileName);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
             bufferedWriter.write("\tOrder Summary\n");
