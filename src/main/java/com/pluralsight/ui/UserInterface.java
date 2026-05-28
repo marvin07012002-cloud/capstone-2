@@ -570,78 +570,88 @@ public class UserInterface {
         }
     }
 
-    private void addSauce(Sandwich sandwich){
+    private void addSauce(Sandwich sandwich) {
         boolean addingSauce = true;
+        while (addingSauce) {
+            System.out.println("\tWhat Sauces would you like?\n ");
+            if (!sandwich.getSauces().contains(Sauces.MAYO)) {
+                System.out.println("1) Mayo");
+            }
+            if (!sandwich.getSauces().contains(Sauces.MUSTARD)) {
+                System.out.println("2) Mustard");
+            }
+            if (!sandwich.getSauces().contains(Sauces.KETCHUP)) {
+                System.out.println("3) Ketchup");
+            }
+            if (!sandwich.getSauces().contains(Sauces.RANCH)) {
+                System.out.println("4) Ranch");
+            }
+            if (!sandwich.getSauces().contains(Sauces.THOUSAND_ISLANDS)) {
+                System.out.println("5) Thousand Islands");
+            }
+            if (!sandwich.getSauces().contains(Sauces.VINAIGRETTE)) {
+                System.out.println("6) Vinaigrette");
+            }
+            System.out.println("0) Done or none\n");
 
-        System.out.println("\tWhat Sauces would you like?\n ");
-        if(!sandwich.getSauces().contains(Sauces.MAYO)){
-            System.out.println("1) Mayo");
-        }
-        if(!sandwich.getSauces().contains(Sauces.MUSTARD)){
-            System.out.println("2) Mustard");
-        }
-        if(!sandwich.getSauces().contains(Sauces.KETCHUP)){
-            System.out.println("3) Ketchup");
-        }
-        if(!sandwich.getSauces().contains(Sauces.RANCH)){
-            System.out.println("4) Ranch");
-        }
-        if(!sandwich.getSauces().contains(Sauces.THOUSAND_ISLANDS)){
-            System.out.println("5) Thousand Islands");
-        }
-        if(!sandwich.getSauces().contains(Sauces.VINAIGRETTE)){
-            System.out.println("6) Vinaigrette");
-        }
-        System.out.println("0) Done or none\n");
+            System.out.println("\tChoose an option");
+            String sauceChoice = scanner.nextLine();
 
-        System.out.println("\tChoose an option");
-        String sauceChoice = scanner.nextLine();
-
-        switch (sauceChoice){
-            case"1":
-                if(!sandwich.getSauces().contains(Sauces.MAYO)){
-                    sandwich.addSauce(Sauces.MAYO);
-                }else{
-                    System.err.println("Mayo Already Added");
-                }
-            case"2":
-                if(!sandwich.getSauces().contains(Sauces.MUSTARD)){
-                    sandwich.addSauce(Sauces.MUSTARD);
-                }else {
-                    System.err.println("Mustard Already Added");
-                }
-            case"3":
-                if (!sandwich.getSauces().contains(Sauces.KETCHUP)){
-                    sandwich.addSauce(Sauces.KETCHUP);
-                }else {
-                    System.err.println("Ketchup Already Added");
-                }
-            case "4":
-                if(!sandwich.getSauces().contains(Sauces.RANCH)){
-                    sandwich.addSauce(Sauces.RANCH);
-                }else {
-                    System.err.println("Ranch Already Added");
-                }
-            case "5":
-                if(!sandwich.getSauces().contains(Sauces.THOUSAND_ISLANDS)){
-                    sandwich.addSauce(Sauces.THOUSAND_ISLANDS);
-                }else {
-                    System.err.println("Thousand Islands Already Added");
-                }
-            case"6":
-                if(!sandwich.getSauces().contains(Sauces.VINAIGRETTE)){
-                    sandwich.addSauce(Sauces.VINAIGRETTE);
-                }else {
-                    System.err.println("Vinaigrette Already Added");
-                }
-            default:
-                System.err.println("""
+            switch (sauceChoice) {
+                case "1":
+                    if (!sandwich.getSauces().contains(Sauces.MAYO)) {
+                        sandwich.addSauce(Sauces.MAYO);
+                        System.out.println("Mayo Added!");
+                    } else {
+                        System.err.println("Mayo Already Added");
+                    }break;
+                case "2":
+                    if (!sandwich.getSauces().contains(Sauces.MUSTARD)) {
+                        sandwich.addSauce(Sauces.MUSTARD);
+                        System.out.println("Mustard Added!");
+                    } else {
+                        System.err.println("Mustard Already Added");
+                    }break;
+                case "3":
+                    if (!sandwich.getSauces().contains(Sauces.KETCHUP)) {
+                        sandwich.addSauce(Sauces.KETCHUP);
+                        System.out.println("Ketchup Added!");
+                    } else {
+                        System.err.println("Ketchup Already Added");
+                    }break;
+                case "4":
+                    if (!sandwich.getSauces().contains(Sauces.RANCH)) {
+                        sandwich.addSauce(Sauces.RANCH);
+                        System.out.println("Ranch Added!");
+                    } else {
+                        System.err.println("Ranch Already Added");
+                    }break;
+                case "5":
+                    if (!sandwich.getSauces().contains(Sauces.THOUSAND_ISLANDS)) {
+                        sandwich.addSauce(Sauces.THOUSAND_ISLANDS);
+                        System.out.println("Thousand Islands Added!");
+                    } else {
+                        System.err.println("Thousand Islands Already Added");
+                    }break;
+                case "6":
+                    if (!sandwich.getSauces().contains(Sauces.VINAIGRETTE)) {
+                        sandwich.addSauce(Sauces.VINAIGRETTE);
+                        System.out.println("Vinaigrette Added!");
+                    } else {
+                        System.err.println("Vinaigrette Already Added");
+                    }break;
+                case "0":
+                    addingSauce = false;
+                    break;
+                default:
+                    System.err.println("""
                             \t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖
                             \t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌
                             \t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌
                                                          \s""");
 
 
+            }
         }
     }
 //    private void addSauce(Sandwich sandwich) {
@@ -811,10 +821,10 @@ public class UserInterface {
                     }
                     break;
                 case "9":
-                    if(!sandwich.getToppings().contains(Toppings.MUSHROOM)){
+                    if (!sandwich.getToppings().contains(Toppings.MUSHROOM)) {
                         sandwich.addTopping(Toppings.MUSHROOM);
                         System.out.println("Mushrooms Added!\n");
-                    }else {
+                    } else {
                         System.err.println("You Already Add Mushroom");
                     }
                     break;
