@@ -355,46 +355,50 @@ public class UserInterface {
     private void addSides(Sandwich sandwich) {
         boolean addingSides = true;
 
-        System.out.println("\tWhat Sides would you like?");
-        if(!sandwich.getSides().contains())
-//
-//        while (addingSides) {
-//            System.out.println("""
-//                     What sides would you like?
-//
-//                     1) Au Jus
-//                     2) Sauce
-//                     0) Done or None
-//
-//                     Choose a Sauce
-//
-//                    """
-//            );
-//            String election = scanner.nextLine();
-//
-//            switch (election) {
-//                case "1":
-//                    sandwich.addSide(Side.AU_JUS);
-//                    System.out.println("Side Au Jus Added!");
-//                    break;
-//                case "2":
-//                    sandwich.addSide(Side.SAUCE);
-//                    System.out.println("Side Sauce Added!");
-//                    break;
-//                case "0":
-//                    addingSides = false;
-//                    break;
-//                default:
-//                    System.err.println("""
-//                            ███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗
-//                            ██╔════╝██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗████╗  ██║    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║
-//                            ███████╗█████╗  ██║     █████╗  ██║        ██║       ███████║██╔██╗ ██║    ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║
-//                            ╚════██║██╔══╝  ██║     ██╔══╝  ██║        ██║       ██╔══██║██║╚██╗██║    ██║   ██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║
-//                            ███████║███████╗███████╗███████╗╚██████╗   ██║       ██║  ██║██║ ╚████║    ╚██████╔╝██║        ██║   ██║╚██████╔╝██║ ╚████║
-//                            ╚══════╝╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═══╝     ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
-//                                                                                                                                                      \s""");
-//            }
+//        System.out.println("\tWhat Sides would you like?");
+//        if(!sandwich.getSides().contains(Sides.AUJUS)){
+//        sout("1) Add Au Jus")
 //        }
+//        if(!sandwich.getSides().contains(Sides.SAUCE)){
+//        sout
+//
+        while (addingSides) {
+            System.out.println("""
+                     What sides would you like?
+                    
+                     1) Au Jus
+                     2) Sauce
+                     0) Done or None
+                    
+                     Choose a Sauce
+                    
+                    """
+            );
+            String election = scanner.nextLine();
+
+            switch (election) {
+                case "1":
+                    sandwich.addSide(Side.AU_JUS);
+                    System.out.println("Side Au Jus Added!");
+                    break;
+                case "2":
+                    sandwich.addSide(Side.SAUCE);
+                    System.out.println("Side Sauce Added!");
+                    break;
+                case "0":
+                    addingSides = false;
+                    break;
+                default:
+                    System.err.println("""
+                            ███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗
+                            ██╔════╝██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗████╗  ██║    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║
+                            ███████╗█████╗  ██║     █████╗  ██║        ██║       ███████║██╔██╗ ██║    ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║
+                            ╚════██║██╔══╝  ██║     ██╔══╝  ██║        ██║       ██╔══██║██║╚██╗██║    ██║   ██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║
+                            ███████║███████╗███████╗███████╗╚██████╗   ██║       ██║  ██║██║ ╚████║    ╚██████╔╝██║        ██║   ██║╚██████╔╝██║ ╚████║
+                            ╚══════╝╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═══╝     ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+                                                                                                                                                      \s""");
+            }
+        }
     }
 
     private void isItToasted(Sandwich sandwich) {
@@ -607,42 +611,48 @@ public class UserInterface {
                         System.out.println("Mayo Added!");
                     } else {
                         System.err.println("Mayo Already Added");
-                    }break;
+                    }
+                    break;
                 case "2":
                     if (!sandwich.getSauces().contains(Sauces.MUSTARD)) {
                         sandwich.addSauce(Sauces.MUSTARD);
                         System.out.println("Mustard Added!");
                     } else {
                         System.err.println("Mustard Already Added");
-                    }break;
+                    }
+                    break;
                 case "3":
                     if (!sandwich.getSauces().contains(Sauces.KETCHUP)) {
                         sandwich.addSauce(Sauces.KETCHUP);
                         System.out.println("Ketchup Added!");
                     } else {
                         System.err.println("Ketchup Already Added");
-                    }break;
+                    }
+                    break;
                 case "4":
                     if (!sandwich.getSauces().contains(Sauces.RANCH)) {
                         sandwich.addSauce(Sauces.RANCH);
                         System.out.println("Ranch Added!");
                     } else {
                         System.err.println("Ranch Already Added");
-                    }break;
+                    }
+                    break;
                 case "5":
                     if (!sandwich.getSauces().contains(Sauces.THOUSAND_ISLANDS)) {
                         sandwich.addSauce(Sauces.THOUSAND_ISLANDS);
                         System.out.println("Thousand Islands Added!");
                     } else {
                         System.err.println("Thousand Islands Already Added");
-                    }break;
+                    }
+                    break;
                 case "6":
                     if (!sandwich.getSauces().contains(Sauces.VINAIGRETTE)) {
                         sandwich.addSauce(Sauces.VINAIGRETTE);
                         System.out.println("Vinaigrette Added!");
                     } else {
                         System.err.println("Vinaigrette Already Added");
-                    }break;
+                    }
+                    break;
                 case "0":
                     addingSauce = false;
                     break;
@@ -657,6 +667,7 @@ public class UserInterface {
             }
         }
     }
+
     private void addTopping(Sandwich sandwich) {
         boolean adding = true;
 
@@ -754,20 +765,10 @@ public class UserInterface {
                     }
                     break;
                 case "8":
-                    if (!sandwich.getToppings().contains(Toppings.GUACAMOLE)) {
-                        sandwich.addTopping(Toppings.GUACAMOLE);
-                        System.out.println("Guacamole Added!\n");
-                    } else {
-                        System.err.println("You Already Add Guacamole");
-                    }
+                    tryToAddTopping(sandwich, Toppings.GUACAMOLE, "Guacamole");
                     break;
                 case "9":
-                    if (!sandwich.getToppings().contains(Toppings.MUSHROOM)) {
-                        sandwich.addTopping(Toppings.MUSHROOM);
-                        System.out.println("Mushrooms Added!\n");
-                    } else {
-                        System.err.println("You Already Add Mushroom");
-                    }
+                    tryToAddTopping(sandwich, Toppings.MUSHROOM, "Mushroom");
                     break;
                 case "0":
                     adding = false;
@@ -783,6 +784,22 @@ public class UserInterface {
         }
     }
 
+    /**
+     * Convenience method to try to add a topping to a sandwich.  If the sandwich already has the topping, an error message
+     * is displayed and the sandwich is unchanged.  If the sandwich doesn't ...
+     *
+     * @param sandwich    The sandwich to try to add the topping to
+     * @param toppings    The topping to try to add
+     * @param toppingName A user-friendly name for the topping
+     */
+    private void tryToAddTopping(Sandwich sandwich, Toppings toppings, String toppingName) {
+        if (!sandwich.getToppings().contains(toppings)) {
+            sandwich.addTopping(toppings);
+            System.out.println(toppingName + " Added!\n");
+        } else {
+            System.err.println("You Already Added " + toppingName);
+        }
+    }
 
     private void addDrinkToOrder(Order order) {
         Drink drink = null;
