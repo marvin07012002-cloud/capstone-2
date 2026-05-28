@@ -632,82 +632,92 @@ public class UserInterface {
         }
     }
 
-    private void addTopping(Sandwich sandwich) {
-        boolean addingToppings = true;
+    private void addTopping(Sandwich sandwich){
+        boolean adding = true;
 
-        while (addingToppings) {
-            System.out.println("""
-                     What toppings would you like to add?
-                    
-                     1) Lettuce
-                     2) Peppers
-                     3) Onions
-                     4) Tomatoes
-                     5) Jalapenos
-                     6) Cucumbers
-                     7) Pickles
-                     8) Guacamole
-                     9) Mushrooms
-                     0) Done or None
-                    
-                     Choose your options.
-                    
-                    """);
-
-            String puttingTopping = scanner.nextLine();
-
-            switch (puttingTopping) {
-                case "1":
-                    sandwich.addTopping(Toppings.LETTUCE);
-                    System.out.println("Lettuce Added!.");
-                    break;
-                case "2":
-                    sandwich.addTopping(Toppings.PEPPERS);
-                    System.out.println("Peppers Added!.");
-                    break;
-                case "3":
-                    sandwich.addTopping(Toppings.ONIONS);
-                    System.out.println("Onions Added!.");
-                    break;
-                case "4":
-                    sandwich.addTopping(Toppings.TOMATOES);
-                    System.out.println("Tomatoes Added!.");
-                    break;
-                case "5":
-                    sandwich.addTopping(Toppings.JALAPENOS);
-                    System.out.println("Jalapenos Added!.");
-                    break;
-                case "6":
-                    sandwich.addTopping(Toppings.CUCUMBERS);
-                    System.out.println("Cucumbers Added!.");
-                    break;
-                case "7":
-                    sandwich.addTopping(Toppings.PICKLES);
-                    System.out.println("Pickles Added!.");
-                    break;
-                case "8":
-                    sandwich.addTopping(Toppings.GUACAMOLE);
-                    System.out.println("Guacamole Added!.");
-                    break;
-                case "9":
-                    sandwich.addTopping(Toppings.MUSHROOM);
-                    System.out.println("Mushrooms Added!.");
-                    break;
-                case "0":
-                    addingToppings = false;
-                    break;
-                default:
-                    System.err.println("""
-                            ███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗
-                            ██╔════╝██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗████╗  ██║    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║
-                            ███████╗█████╗  ██║     █████╗  ██║        ██║       ███████║██╔██╗ ██║    ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║
-                            ╚════██║██╔══╝  ██║     ██╔══╝  ██║        ██║       ██╔══██║██║╚██╗██║    ██║   ██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║
-                            ███████║███████╗███████╗███████╗╚██████╗   ██║       ██║  ██║██║ ╚████║    ╚██████╔╝██║        ██║   ██║╚██████╔╝██║ ╚████║
-                            ╚══════╝╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═══╝     ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
-                                                                                                                                                      \s""");
-            }
+        while(adding){
+            if
         }
+
+
     }
+
+//    private void addTopping(Sandwich sandwich) {
+//        boolean addingToppings = true;
+//
+//        while (addingToppings) {
+//            System.out.println("""
+//                     What toppings would you like to add?
+//
+//                     1) Lettuce
+//                     2) Peppers
+//                     3) Onions
+//                     4) Tomatoes
+//                     5) Jalapenos
+//                     6) Cucumbers
+//                     7) Pickles
+//                     8) Guacamole
+//                     9) Mushrooms
+//                     0) Done or None
+//
+//                     Choose your options.
+//
+//                    """);
+//
+//            String puttingTopping = scanner.nextLine();
+//
+//            switch (puttingTopping) {
+//                case "1":
+//                    sandwich.addTopping(Toppings.LETTUCE);
+//                    System.out.println("Lettuce Added!.");
+//                    break;
+//                case "2":
+//                    sandwich.addTopping(Toppings.PEPPERS);
+//                    System.out.println("Peppers Added!.");
+//                    break;
+//                case "3":
+//                    sandwich.addTopping(Toppings.ONIONS);
+//                    System.out.println("Onions Added!.");
+//                    break;
+//                case "4":
+//                    sandwich.addTopping(Toppings.TOMATOES);
+//                    System.out.println("Tomatoes Added!.");
+//                    break;
+//                case "5":
+//                    sandwich.addTopping(Toppings.JALAPENOS);
+//                    System.out.println("Jalapenos Added!.");
+//                    break;
+//                case "6":
+//                    sandwich.addTopping(Toppings.CUCUMBERS);
+//                    System.out.println("Cucumbers Added!.");
+//                    break;
+//                case "7":
+//                    sandwich.addTopping(Toppings.PICKLES);
+//                    System.out.println("Pickles Added!.");
+//                    break;
+//                case "8":
+//                    sandwich.addTopping(Toppings.GUACAMOLE);
+//                    System.out.println("Guacamole Added!.");
+//                    break;
+//                case "9":
+//                    sandwich.addTopping(Toppings.MUSHROOM);
+//                    System.out.println("Mushrooms Added!.");
+//                    break;
+//                case "0":
+//                    addingToppings = false;
+//                    break;
+//                default:
+//                    System.err.println("""
+//                            ███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗
+//                            ██╔════╝██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗████╗  ██║    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║
+//                            ███████╗█████╗  ██║     █████╗  ██║        ██║       ███████║██╔██╗ ██║    ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║
+//                            ╚════██║██╔══╝  ██║     ██╔══╝  ██║        ██║       ██╔══██║██║╚██╗██║    ██║   ██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║
+//                            ███████║███████╗███████╗███████╗╚██████╗   ██║       ██║  ██║██║ ╚████║    ╚██████╔╝██║        ██║   ██║╚██████╔╝██║ ╚████║
+//                            ╚══════╝╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═══╝     ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+//                                                                                                                                                      \s""");
+//            }
+//        }
+//    }
 
     private void addDrinkToOrder(Order order) {
         Drink drink = null;
