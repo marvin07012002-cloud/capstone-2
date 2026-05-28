@@ -355,43 +355,46 @@ public class UserInterface {
     private void addSides(Sandwich sandwich) {
         boolean addingSides = true;
 
-        while (addingSides) {
-            System.out.println("""
-                     What sides would you like?
-                    
-                     1) Au Jus
-                     2) Sauce
-                     0) Done or None
-                    
-                     Choose a Sauce
-                    
-                    """
-            );
-            String election = scanner.nextLine();
-
-            switch (election) {
-                case "1":
-                    sandwich.addSide(Side.AU_JUS);
-                    System.out.println("Side Au Jus Added!");
-                    break;
-                case "2":
-                    sandwich.addSide(Side.SAUCE);
-                    System.out.println("Side Sauce Added!");
-                    break;
-                case "0":
-                    addingSides = false;
-                    break;
-                default:
-                    System.err.println("""
-                            ███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗
-                            ██╔════╝██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗████╗  ██║    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║
-                            ███████╗█████╗  ██║     █████╗  ██║        ██║       ███████║██╔██╗ ██║    ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║
-                            ╚════██║██╔══╝  ██║     ██╔══╝  ██║        ██║       ██╔══██║██║╚██╗██║    ██║   ██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║
-                            ███████║███████╗███████╗███████╗╚██████╗   ██║       ██║  ██║██║ ╚████║    ╚██████╔╝██║        ██║   ██║╚██████╔╝██║ ╚████║
-                            ╚══════╝╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═══╝     ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
-                                                                                                                                                      \s""");
-            }
-        }
+        System.out.println("\tWhat Sides would you like?");
+        if(!sandwich.getSides().contains())
+//
+//        while (addingSides) {
+//            System.out.println("""
+//                     What sides would you like?
+//
+//                     1) Au Jus
+//                     2) Sauce
+//                     0) Done or None
+//
+//                     Choose a Sauce
+//
+//                    """
+//            );
+//            String election = scanner.nextLine();
+//
+//            switch (election) {
+//                case "1":
+//                    sandwich.addSide(Side.AU_JUS);
+//                    System.out.println("Side Au Jus Added!");
+//                    break;
+//                case "2":
+//                    sandwich.addSide(Side.SAUCE);
+//                    System.out.println("Side Sauce Added!");
+//                    break;
+//                case "0":
+//                    addingSides = false;
+//                    break;
+//                default:
+//                    System.err.println("""
+//                            ███████╗███████╗██╗     ███████╗ ██████╗████████╗     █████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗
+//                            ██╔════╝██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝    ██╔══██╗████╗  ██║    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║
+//                            ███████╗█████╗  ██║     █████╗  ██║        ██║       ███████║██╔██╗ ██║    ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║
+//                            ╚════██║██╔══╝  ██║     ██╔══╝  ██║        ██║       ██╔══██║██║╚██╗██║    ██║   ██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║
+//                            ███████║███████╗███████╗███████╗╚██████╗   ██║       ██║  ██║██║ ╚████║    ╚██████╔╝██║        ██║   ██║╚██████╔╝██║ ╚████║
+//                            ╚══════╝╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═══╝     ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+//                                                                                                                                                      \s""");
+//            }
+//        }
     }
 
     private void isItToasted(Sandwich sandwich) {
