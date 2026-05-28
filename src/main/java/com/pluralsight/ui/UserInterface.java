@@ -673,22 +673,28 @@ public class UserInterface {
             switch (choice){
                 case "1":
                     if(!sandwich.getToppings().contains(Toppings.LETTUCE)){
-
+                      sandwich.addTopping(Toppings.LETTUCE);
+                        System.out.println("Lettuce Added!\n");
+                    }else {
+                        System.err.println("You Already Add Lettuce");
                     }
+                    break;
                 case "2":
-                    if(sandwich.getToppings().contains(Toppings.PEPPERS)){
-                        System.err.println("Peppers Already Added");
+                    if(!sandwich.getToppings().contains(Toppings.PEPPERS)){
+                        sandwich.addTopping(Toppings.PEPPERS);
+                        System.out.println("Peppers Added!\n");
                         break;
-                    } else if (!sandwich.getToppings().contains(Toppings.PEPPERS)) {
-                        System.out.println("Peppers Added");
-                        break;
+                    } else {
+                        System.err.println("You Already Add Peppers");
                     }
+                    break;
+
                 default:
-                    System.err.println("\"\"\"\n" +
-                            "                        \\t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖\n" +
-                            "                        \\t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌\n" +
-                            "                        \\t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌\n" +
-                            "                                                     \\s\"\"\"");
+                    System.err.println("""
+                        \t▄▖▖ ▖▖▖▄▖▖ ▄▖▄   ▄▖▄▖▄▖▄▖▄▖▖ ▖
+                        \t▐ ▛▖▌▌▌▌▌▌ ▐ ▌▌  ▌▌▙▌▐ ▐ ▌▌▛▖▌
+                        \t▟▖▌▝▌▚▘▛▌▙▖▟▖▙▘  ▙▌▌ ▐ ▟▖▙▌▌▝▌
+                                                     \s""");
             }
 
         }
