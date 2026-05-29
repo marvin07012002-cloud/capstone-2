@@ -541,7 +541,7 @@ public class UserInterface {
 
     /**
      * Prompts the customer to choose one meat or no meat.
-     * If a meat is selected, the customer is also asked whether they want extra meat.
+     * If meat is selected, the customer is also asked whether they want extra meat.
      *
      * @param sandwich The sandwich being customized
      */
