@@ -11,6 +11,11 @@ public class Drink implements PriceItem {
         this.size = size;
     }
 
+    /**
+     * Calculates the drink price based only on size.
+     *
+     * @return The price of this drink
+     */
     @Override
     public double getPrice() {
 

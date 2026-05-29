@@ -94,6 +94,12 @@ public class Sandwich implements PriceItem {
         return sides;
     }
 
+    /**
+     * Calculates the sandwich price based on size, selected premium toppings,
+     * and whether extra meat or extra cheese was selected.
+     *
+     * @return The total price of this sandwich
+     */
     @Override
     public double getPrice() {
         double breadPrice;

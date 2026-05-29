@@ -1,6 +1,10 @@
 package com.pluralsight.models;
 
 public class Bec extends Sandwich {
+    /**
+     * Creates a default Bacon, Egg, and Cheese signature sandwich.
+     * The sandwich can still be customized before being added to the order.
+     */
     public Bec(){
         setSize(Size.MEDIUM);
         setBreadType(BreadType.ROLL);

@@ -26,6 +26,11 @@ public class Order {
         chips.add(chip);
     }
 
+    /**
+     * Adds the prices of all sandwiches, drinks, and chips in the order.
+     *
+     * @return The total price of the full order
+     */
     public double getTotalPrice() {
         double total = 0;
 
@@ -50,6 +55,9 @@ public class Order {
         return this.sandwiches.isEmpty() && this.drinks.isEmpty() && this.chips.isEmpty();
     }
 
+    /**
+     * Displays the complete order summary before checkout.
+     */
     public void displayOrderDetails() {
         System.out.println("Order Summary");
         System.out.println("===========================");
@@ -71,6 +79,11 @@ public class Order {
         System.out.printf("Order Total: $%.2f\n", getTotalPrice());
     }
 
+    /**
+     * Creates a receipt file name based on the current date and time.
+     *
+     * @return A receipt file name in yyyyMMdd-HHmmss.txt format
+     */
     public String getReceiptName() {
         LocalDateTime now = LocalDateTime.now();
 
@@ -79,6 +92,9 @@ public class Order {
         return now.format(formatter) + ".txt";
     }
 
+    /**
+     * Saves the current order details to a receipt file.
+     */
     public void saveReceipt() {
         try {
             String fileName = getReceiptName();

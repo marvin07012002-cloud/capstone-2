@@ -6,7 +6,10 @@ import java.util.Scanner;
 
 public class UserInterface {
     private final Scanner scanner = new Scanner(System.in);
-
+    /**
+     * Starts the main application loop.
+     * Displays the home screen until the user chooses to exit.
+     */
     public void display() {
         boolean running = true;
 
@@ -47,6 +50,12 @@ public class UserInterface {
         }
     }
 
+    /**
+     * Displays the order menu for the current order.
+     * The user can add items, check out, or cancel the order.
+     *
+     * @param order The order currently being built
+     */
     private void displayMenu(Order order) {
 
         while (true) {
@@ -127,6 +136,13 @@ public class UserInterface {
         }
     }
 
+    /**
+     * The customer can select a signature sandwich and confirm whether
+     * it should be added to the current order. Some signature sandwiches may
+     * ask for additional choices, such as bread type.
+     *
+     * @param order The current order that the signature sandwich may be added to
+     */
     private void addSignatureSandwichToOrder(Order order) {
         boolean signing = true;
         Sandwich sandwich = null;
@@ -233,7 +249,12 @@ public class UserInterface {
         }
     }
 
-
+    /**
+     * Builds a custom sandwich by prompting the customer for each sandwich option.
+     * The completed sandwich is displayed for review before it is added to the order.
+     *
+     * @param order The current order that the sandwich may be added to
+     */
     private void addSandwichToOrder(Order order) {
         Sandwich sandwich = new Sandwich();
 
@@ -272,6 +293,12 @@ public class UserInterface {
         }
     }
 
+    /**
+     * Prompts the customer to select a bread type for the sandwich.
+     * The method keeps asking until a valid bread option is selected.
+     *
+     * @param sandwich The sandwich being customized
+     */
     private void getBread(Sandwich sandwich) {
         while (sandwich.getBreadType() == null) {
             System.out.println("""
@@ -314,6 +341,13 @@ public class UserInterface {
         }
     }
 
+    /**
+     * Prompts the customer to select a sandwich size.
+     * If the customer cancels, true is returned so the sandwich building process can stop.
+     *
+     * @param sandwich The sandwich being customized
+     * @return true if the customer cancels; false after a valid size is selected
+     */
     private boolean sizeType(Sandwich sandwich) {
         while (sandwich.getSize() == null) {
             System.out.println("""
@@ -352,16 +386,15 @@ public class UserInterface {
         return false;
     }
 
+    /**
+     * Prompts the customer to choose sandwich sides.
+     * The customer may choose zero or more sides, and the loop continues
+     * until the customer selects Done.
+     *
+     * @param sandwich The sandwich being customized
+     */
     private void addSides(Sandwich sandwich) {
         boolean addingSides = true;
-
-//        System.out.println("\tWhat Sides would you like?");
-//        if(!sandwich.getSides().contains(Sides.AUJUS)){
-//        sout("1) Add Au Jus")
-//        }
-//        if(!sandwich.getSides().contains(Sides.SAUCE)){
-//        sout
-//
         while (addingSides) {
             System.out.println("""
                      What sides would you like?
@@ -401,6 +434,12 @@ public class UserInterface {
         }
     }
 
+    /**
+     * Prompts the customer to choose whether the sandwich should be toasted.
+     * The method keeps asking until the customer enters Yes or No.
+     *
+     * @param sandwich The sandwich being customized
+     */
     private void isItToasted(Sandwich sandwich) {
         while (true) {
             System.out.println("Do you want it Toasted? Yes/No");
@@ -423,6 +462,12 @@ public class UserInterface {
         }
     }
 
+    /**
+     * Prompts the customer to choose one cheese or no cheese.
+     * If a cheese is selected, the customer is also asked whether they want extra cheese.
+     *
+     * @param sandwich The sandwich being customized
+     */
     private void addCheeseToSandwich(Sandwich sandwich) {
         boolean running = true;
         while (running) {
@@ -494,6 +539,12 @@ public class UserInterface {
         }
     }
 
+    /**
+     * Prompts the customer to choose one meat or no meat.
+     * If a meat is selected, the customer is also asked whether they want extra meat.
+     *
+     * @param sandwich The sandwich being customized
+     */
     private void addMeatToSandwich(Sandwich sandwich) {
         boolean choosing = true;
         while (choosing) {
@@ -577,6 +628,12 @@ public class UserInterface {
         }
     }
 
+    /**
+     * Prompts the customer to choose sauces for the sandwich.
+     * The customer may choose zero or more sauces, but duplicate sauces are not added.
+     *
+     * @param sandwich The sandwich being customized
+     */
     private void addSauce(Sandwich sandwich) {
         boolean addingSauce = true;
         while (addingSauce) {
@@ -667,6 +724,12 @@ public class UserInterface {
             }
         }
     }
+    /**
+     * Prompts the customer to choose regular toppings for the sandwich.
+     * The customer may choose zero or more toppings, but duplicate toppings are not added.
+     *
+     * @param sandwich The sandwich being customized
+     */
 
     private void addTopping(Sandwich sandwich) {
         boolean adding = true;
@@ -765,6 +828,12 @@ public class UserInterface {
         }
     }
 
+    /**
+     * Prompts the customer to select a drink size.
+     * The selected drink is displayed for review before being added to the order.
+     *
+     * @param order The current order that the drink may be added to
+     */
     private void addDrinkToOrder(Order order) {
         Drink drink = null;
 
@@ -825,6 +894,12 @@ public class UserInterface {
 
     }
 
+    /**
+     * Creates a chips item and asks the customer to confirm it.
+     * Chips are only added to the order if the customer confirms.
+     *
+     * @param order The current order that the chips may be added to
+     */
     private void addChipsToOrder(Order order) {
         Chips chips = new Chips();
 
