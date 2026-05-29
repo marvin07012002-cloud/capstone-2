@@ -1,4 +1,4 @@
-package com.pluralsight.models;
+package com.pluralsight.deli;
 
 public class Blt extends Sandwich{
 

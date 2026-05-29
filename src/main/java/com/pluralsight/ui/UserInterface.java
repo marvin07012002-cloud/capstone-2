@@ -1,6 +1,6 @@
 package com.pluralsight.ui;
 
-import com.pluralsight.models.*;
+import com.pluralsight.deli.*;
 
 import java.util.Scanner;
 

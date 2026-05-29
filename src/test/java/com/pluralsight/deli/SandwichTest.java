@@ -1,4 +1,4 @@
-package com.pluralsight.models;
+package com.pluralsight.deli;
 
 import org.junit.jupiter.api.Test;
 

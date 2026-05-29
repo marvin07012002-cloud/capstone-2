@@ -1,4 +1,3 @@
-import com.pluralsight.models.*;
 import com.pluralsight.ui.UserInterface;
 
 public class Main {
@@ -9,5 +8,5 @@ public class Main {
         ui.display();
 
 
-
-    }}
+    }
+}
